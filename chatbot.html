@@ -1,0 +1,47 @@
+<! doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+</style>
+</head>
+<body >
+<div class="container" >
+    <div class="row" >
+        <div class="col-md-5" >
+            <div class="panel panel-primary" style="width:40%">
+                <div class="panel-heading" id="accordion" style="background-color:black">
+                    struct here??
+                    <div class="btn-group pull-right">
+                        <a type="button"  data-toggle="collapse" href="#collapseOne">
+                            <span ><img src="serch.png" style="width:14px"></span>
+                        </a>
+                    </div>
+                </div>
+            <div class="panel-collapse collapse" id="collapseOne">
+                <br>
+                <i>enter wher u wanna go....<br>
+                example:homepage</i><br><br>
+                
+                <div class="panel-footer">
+                    <div class="input-group">
+		<form action="chatbot.php" method="post">
+                        <input id="btn-input" type="text" name="text" class="form-control input-sm" placeholder="Type your message here..." />
+                        <span class="input-group-btn">
+                            <input type="submit" class="btn btn-warning btn-sm" id="btn-chat" value="a">
+                                
+                        </span>
+		</form>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-blue-grey.css">
+
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "raleway"}
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	background: #e9e9e9;
+	color: #9a9a9a;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 24px;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 16px 24px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat h4 {
+	font-size: 12px;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-message-counter {
+	background: #e62727;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+}
+
+.chat-close {
+	background: #1b2126;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;
+	margin: 2px 0 0 0;
+	text-align: center;
+	width: 16px;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 252px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message img {
+	border-radius: 50%;
+	float: left;
+}
+
+.chat-message-content {
+	margin-left: 56px;
+}
+
+.chat-time {
+	float: right;
+	font-size: 10px;
+}
+
+.chat-feedback {
+	font-style: italic;	
+	margin: 0 0 0 80px;
+}
+
+</style>
+<body class="w3-theme-l5" style="font-family:Raleway;">
+
+<center>  
+<div style="background-color:gray;"><br>
+   <h1 style="font-size:50px;">NEWS ROOM</h1><br>
+</div>
+</center>
+
+<!-- Page Container -->
+<div class="w3-container w3-content" style="max-width:1400px;margin-top:80px">    
+  <!-- The Grid -->
+  <div class="w3-row">
+    <!-- Left Column -->
+    <div class="w3-col m3">
+      <!-- Profile -->
+      <div class="w3-card w3-round w3-white">
+        <div class="w3-container">
+         <h4 class="w3-center"><b>IIIT SRICITY</b></h4><br>
+         <p class="w3-center"><center><img src="iiitlogo.png" class="w3-circle" style="height:106px;width:106px" ></center></p><br>
+         <hr>
+         <p><i class="fa fa-pencil fa-fw w3-margin-right w3-text-theme"></i>Indian Institute Of Information Techology</p>
+         <p><i class="fa fa-home fa-fw w3-margin-right w3-text-theme"></i> Sricity , Andhra pradesh</p>
+         <p><i class="fa fa-birthday-cake fa-fw w3-margin-right w3-text-theme"></i> Established in 2013</p>
+        </div>
+      </div>
+      <br>
+      
+      <!-- Accordion -->
+      <div class="w3-card w3-round">
+        <div class="w3-white">
+        <a href="fb2.html" style="text-decoration:none;"> <button  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-circle-o-notch fa-fw w3-margin-right"></i>Facebook News</button></a>
+         
+         <a href="almanc.html" style="text-decoration:none;" > <button  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-calendar-check-o fa-fw w3-margin-right"></i> Calender</button></a>
+          
+          <button  class="w3-button w3-block w3-theme-l1 w3-left-align"><i class="fa fa-users fa-fw w3-margin-right"></i>Gallery </button>
+         
+        </div>      
+      </div>
+      <br>
+      
+    
+      <br>
+      
+      <!-- Alert Box -->
+      <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p> Any one intrested in visiting butterfly park </p>
+          <p>Intrested people contact our CLC</p>
+      </div>
+      
+      
+     <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p> Today we have a trip to movie   </p>
+          <p>Intrested people contact our CLC</p>
+      </div>
+    
+    
+     <div class="w3-container w3-display-container w3-round w3-theme-l4 w3-border w3-theme-border w3-margin-bottom w3-hide-small">
+        <span onclick="this.parentElement.style.display='none'" class="w3-button w3-theme-l3 w3-display-topright">
+          <i class="fa fa-remove"></i>
+        </span>
+        <p><strong>Hey!</strong></p>
+        <p> This sunday lets trek </p>
+          <p>Intrested people contact our CLC</p>
+      </div>
+    
+    
+    <!-- End Left Column -->
+    </div>
+    
+    <!-- Middle Column -->
+    <div class="w3-col m7">
+    
+      <div class="w3-row-padding">
+        <div class="w3-col m12">
+          <div class="w3-card w3-round w3-white">
+           
+          </div>
+        </div>
+      </div>
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+        
+       <center><b>
+        <h4><b>Ekta Divas</b></h4><br>
+        </center>
+        <hr class="w3-clear">
+        <p> <b>Dear All,</b></p>
+<p><b>
+It is to be informed that Rashtriy Ekta Diwas Pledge program will be conducted on today at 5.30 PM ( room no. 314).
+<br>Every one lets come to room no. 314 and make the "Ekta Divas" remarkable.</b>
+</p>
+Best regards
+  <br>
+  <img src=news1.jpg width="700px";height="600px";>
+        </p>
+          <div class="w3-row-padding" style="margin:0 -10px">
+            
+        </div>
+        
+      </div>
+      
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+     <center> 
+       
+        <h4><b>weather update</b></h4><br>
+        <b>its too worse out try to stay indoors and close windows at times</b>
+      </center>
+        <hr class="w3-clear">
+    
+       
+      <img src=news2.jpg width="600px";height="200px";>
+      </div>  
+
+      <div class="w3-container w3-card w3-white w3-round w3-margin"><br>
+       
+       <center> 
+        <h4><b>Is this yours.......</b></h4><br>
+         
+          <p><b>someone lost their sony headset in computerlab-1
+        </p><p>if it's yours collect from Avinash of UG-1</b></p> </center>
+        <img src="news3.jpg" style="width:100%" class="w3-margin-bottom"><br>
+        
+        <hr class="w3-clear">
+       
+        </div>
+      
+    <!-- End Middle Column -->
+    </div>
+    
+    <!-- Right Column -->
+    <div class="w3-col m2">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          <p>Upcoming Events:</p>
+          <h4>ACM-ICPC</h4><br>
+          
+          
+          <p><strong>Coding Contest</strong></p>
+          <p>regional contest on 11th December</p>
+        </div>
+          <p><a href="https://icpc.baylor.edu/"><button class="w3-button w3-block w3-theme-l4">Info</button></a></p>
+      </div>
+      <br>
+      <div class="w3-col m18">
+      <div class="w3-card w3-round w3-white w3-center">
+        <div class="w3-container">
+          
+          <h4>Coding Club</h4><br>
+          <p> next calss on 12th November</p>
+        
+          <br><br>
+       <p>stay tuned for more updates</p>
+        </div>
+      </div>
+   
+      <br>
+     
+      <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+      
+      <br>
+      
+      
+    <!-- End Right Column -->
+    </div>
+    
+  <!-- End Grid -->
+  </div>
+  
+<!-- End Page Container -->
+</div>
+<br>
+
+<!-- Footer -->
+<footer class="w3-container w3-theme-d3 w3-padding-16">
+<center>  <h4>We IIITians Make the News</h4> </center>
+</footer>
+
+
+
+	<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>Navic</h4>
+
+			<span class="chat-message-counter">nav</span>
+
+		</header>
+
+		<div class="chat"><br><br>
+			<center>enter here where u wanna go....</center><br><br>
+			
+			<p class="chat-feedback">example:- homepage</p>
+
+			<form action="chatbot.php" method="post">
+
+				<fieldset>
+					<form>
+					<input type="text"  name="text" style="width:70%;"  placeholder="enter here..." autofocus >
+					<input type="submit" value="submit" style="background-color:black;color:white;width:20%;height:32px">
+					<input type="hidden">
+					</form>
+				</fieldset>
+
+			</form>
+
+		</div> <!-- end chat -->
+
+	</div> <!-- end live-chat -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+	
+	
+	(function() {
+
+	$('#live-chat header').on('click', function() {
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+	});
+
+	$('.chat-close').on('click', function(e) {
+
+		e.preventDefault();
+		$('#live-chat').fadeOut(300);
+
+	});
+
+}) ();
+	
+	</script>
+	
+	
+	
+
+
+<script>
+// Accordion
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+        x.previousElementSibling.className += " w3-theme-d1";
+    } else { 
+        x.className = x.className.replace("w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-theme-d1", "");
+    }
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+
+</body>
+</html> 
+

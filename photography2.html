@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+	<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+
+
+<style>
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  opacity:0.6;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+
+html { 
+  background: url(02.jpg) no-repeat center fixed; 
+  background-size: cover;
+}
+
+
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+
+.button {
+    background-color:black;
+    border:none;
+    color:white;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:30px;
+    padding: 5px 30px;}
+    
+button:hover {
+    opacity: 0.5;
+}
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	/*<!--background: #e9e9e9;-->*/
+	color: #9a9a9a;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 24px;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 16px 24px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat h4 {
+	font-size: 12px;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-message-counter {
+	background: #e62727;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+}
+
+.chat-close {
+	background: #1b2126;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;
+	margin: 2px 0 0 0;
+	text-align: center;
+	width: 16px;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 252px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message img {
+	border-radius: 50%;
+	float: left;
+}
+
+.chat-message-content {
+	margin-left: 56px;
+}
+
+.chat-time {
+	float: right;
+	font-size: 10px;
+}
+
+.chat-feedback {
+	font-style: italic;	
+	margin: 0 0 0 80px;
+}
+
+
+
+</style>
+
+</head>
+
+<body style="padding:7px">
+<br><br>
+<div class="w3-content w3-display-container" style="width:96%;height:350px">
+  <img class="mySlides fade" src="020.jpg" style="width:100%;height:350px">
+  <img class="mySlides fade" src="027.jpg" style="width:100%;height:350px">
+  <img class="mySlides fade" src="045.jpg" style="width:100%;height:350px">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center;font-family:raleway;">
+
+<button class="button">Contacts</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#about"><button class="button">About   </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="button">Immerse In </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="photography.html"><button class="button">Gallery </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#ptv"><button class="button">places </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  
+</div>
+
+<br><br>
+<center>
+
+<div style="background-color: #000000;opacity:0.4;border:1px solid grey;width:1000px;font-family:raleway">
+<h3 style="color:white;opacity:1.0;font-family:raleway">Photography Club</h3>
+
+<div style="color:white;opacity:1.0;font-family:raleway">
+<p>
+<b>
+Our objective is to develop and encourage photography and its allied activities
+The aim of the Club is to harmonize all ideas and conduct photo walks on weekends and holidays aiming to capture and document nature, heritage, city culture, festivals, infra- structure and specific events of interest to photography with a broader perspective
+To build around the objective of photography, various other activities around photography including travel to places of interest, bringing out desk calendars, conduct meetups to share the knowledge etc.,
+Exclusive pictures shot by the Photographers may only be used for Educational & Research documentation only.
+</b>
+</p>
+
+
+<p>
+
+<h4>Active Areas </h4>
+<h5>Floura</h5>
+<h5>Fauna</h5>
+<h5>Fashion</h5>
+<h5>Landscape</h5>
+
+
+</p>
+
+
+
+<h3 id="about">About</h3>
+
+<p>
+<b>
+
+Fashion photography is a genre of photography which is devoted to displaying clothing and other fashion items. Fashion photography is most often conducted for advertisements or fashion magazines such as Vogue, Vanity Fair, or Elle. Fashion photography has developed its own aesthetic in which the clothes and fashions are enhanced by the presence of exotic locations or accessories.
+</b>
+</p>
+
+
+<p>
+<b>
+
+Wildlife photography is a genre of photography concerned with documenting various forms of wildlife in their natural habitat. It is one of the more challenging forms of photography. As well as requiring sound technical skills, such as being able to expose correctly, wildlife photographers generally need good field craft skills. For example, some animals are difficult to approach and thus a knowledge of the animal's behavior is needed in order to be able to predict its actions. Photographing some species may require stalking skills or the use of a hide/blind for concealment.
+
+While wildlife photographs can be taken using basic equipment, successful photography of some types of wildlife requires specialist equipment, such as macro lenses for insects, long focal length lenses for birds and underwater cameras for marine life. However, a great wildlife photograph can also be the result of being in the right place at the right time[1] and often involves a good understanding of animal behavior in order to anticipate interesting situations to capture in photography.
+</b>
+</p>
+
+<p>
+<b>
+
+Street photography, also sometimes called candid photography, is photography conducted for art or enquiry that features unmediated chance encounters and random incidents[1] within public places. Although there is a difference between street and candid photography it is usually subtle with most street photography being candid in nature but not all candid photography being classifiable as street photography. Street photography does not necessitate the presence of a street or even the urban environment. Though people usually feature directly, street photography might be absent of people and can be of an object or environment where the image projects a decidedly human character in facsimile or aesthetic.[2][page needed][3]
+</b>
+</p>
+
+<p>
+<b>
+
+Street photography can focus on people and their behavior in public, thereby also recording people's history. This motivation entails having also to navigate or negotiate changing expectations and laws of privacy, security and property. In this respect the street photographer is similar to social documentary photographers or photojournalists who also work in public places, but with the aim of capturing newsworthy events; any of these photographers' images may capture people and property visible within or from public places. The existence of services like Google Street View, recording public space at a massive scale, and the burgeoning trend of self-photography (selfies), further complicate ethical issues reflected in attitudes to street photography.
+</b>
+</p>
+
+<p>
+<b>
+
+Abstract photography, sometimes called non-objective, experimental, conceptual or concrete photography, is a means of depicting a visual image that does not have an immediate association with the object world and that has been created through the use of photographic equipment, processes or materials. An abstract photograph may isolate a fragment of a natural scene in order to remove its inherent context from the viewer, it may be purposely staged to create a seemingly unreal appearance from real objects, or it may involve the use of color, light, shadow, texture, shape and/or form to convey a feeling, sensation or impression. The image may be produced using traditional photographic equipment like a camera, darkroom or computer, or it may be created without using a camera by directly manipulating film, paper or other photographic media, including digital presentations.
+
+
+
+</b>
+</p>
+
+
+<p>
+<b>
+
+There has been no commonly-used definition of the term "abstract photography". Books and articles on the subject include everything from a completely representational image of an abstract subject matter, such as Aaron Siskind's photographs of peeling paint, to entirely non-representational imagery created without a camera or film, such as Marco Breuer's fabricated prints and books.[1] The term is both inclusive of a wide range of visual representations and explicit in its categorization of a type of photography that is visibly ambiguous by its very nature.
+
+</b>
+</p>
+
+<p>
+<b>
+
+Many photographers, critics, art historians and others have written or spoken about abstract photography without attempting to formalize a specific meaning. Alvin Langdon Coburn in 1916 proposed that an exhibition be organized with the title "Abstract Photography", for which the entry form would clearly state that "no work will be admitted in which the interest of the subject matter is greater than the appreciation of the extraordinary."[2] The proposed exhibition did not happen, yet Coburn later created some distinctly abstract photographs.[3]
+
+</b>
+</p>
+
+<p>
+<b>
+
+Photographer and Professor of Psychology John Suler, in his essay Photographic Psychology: Image and Psyche, said that "An abstract photograph draws away from that which is realistic or literal. It draws away from natural appearances and recognizable subjects in the actual world. Some people even say it departs from true meaning, existence, and reality itself. It stands apart from the concrete whole with its purpose instead depending on conceptual meaning and intrinsic form....Here’s the acid test: If you look at a photo and there’s a voice inside you that says 'What is it?'….Well, there you go. It’s an abstract photograph."[4]
+
+</b>
+</p>
+
+<p>
+<b>
+
+Barbara Kasten, also a photographer and professor, wrote that "Abstract photography challenges our popular view of photography as an objective image of reality by reasserting its constructed nature....Freed from its duty to represent, abstract photography continues to be a catchall genre for the blending of mediums and disciplines. It is an arena to test photography."[1]
+
+
+
+</b>
+</p>
+
+
+
+
+<p>
+<b>
+<h4>Photographic Points</h4>
+There are many sources of attractions around SriCity. The closest being the Sriharikota Island which is surrounded by the Pulicat Lake which is the biggest lake in India. There are many beautiful birds that swim and fly around the lakes in the Sriharikota Area. The Sriharikota forest is also very special and offers some marvelous views.
+</b>
+</p>
+
+
+
+<p>
+<b>
+The Sriharikota rocket launch station itself is located in the Sriharikota forest . Visitors interested in nature photography can bring along a camera and tripod to get some wonderful snaps of groups of birds in the Nelapattu & Pulicat Lake Bird Sanctuary. Boating is also available near Pulicat Lake. The Dutch Cemetery and Dutch Fort from the times gone by add a distinct flavor to the overall trip
+</b>
+</p>
+
+
+<h4 id="ptv">Places to visit</h4>
+<p>
+<b>
+
+
+Distance from Chennai : 60kms<br>
+<br>
+Places to see : PulicatLake, Bird sanctuary, Boating, Tada Falls, Sriharikota Rocket launch , Station & Forest, Dutch Cemetery & Dutch Fort, Pulicat Temples.<br>
+<br>
+Mode of transport : Cars, Van, Mini-Bus or Bikes. Suburban trains from Chennai Central.<br>
+<br>
+Route from Chennai : Chennai - Red hills - Sricity -Sullurpeta -Sriharikota. <br>
+
+
+</b>
+</p>
+
+
+
+</div>
+</div>
+
+
+</center>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"  style="font-family:raleway">Top</button>
+
+
+<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>Navic</h4>
+
+			<span class="chat-message-counter">nav</span>
+
+		</header>
+
+		<div class="chat"><br><br>
+			<center>enter here where u wanna go....</center><br><br>
+			
+			<p class="chat-feedback">example:- homepage</p>
+
+			<form action="chatbot.php" method="post">
+
+				<fieldset>
+					<form>
+					<input type="text"  name="text" style="width:70%;"  placeholder="enter here..." autofocus >
+					<input type="submit" value="submit" style="background-color:black;color:white;width:20%;height:32px">
+					<input type="hidden">
+					</form>
+				</fieldset>
+
+			</form>
+
+		</div> <!-- end chat -->
+
+	</div> <!-- end live-chat -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+	
+	
+	(function() {
+
+	$('#live-chat header').on('click', function() {
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+	});
+
+	$('.chat-close').on('click', function(e) {
+
+		e.preventDefault();
+		$('#live-chat').fadeOut(300);
+
+	});
+
+}) ();
+	
+	</script>
+	
+	
+	
+
+<script>
+// When the user scrolls down 55px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 55 || document.documentElement.scrollTop > 55) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+
+
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+   
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+
+
+}
+</script>
+
+</body>
+</html> 
+

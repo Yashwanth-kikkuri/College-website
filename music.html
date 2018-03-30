@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+
+
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+<title>Music Club</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<style>
+
+
+ html{
+   background: url("123.jpg") no-repeat center fixed;
+   background-size:cover;
+   
+ }
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	
+	color: #9a9a9a;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 24px;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 16px 24px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat h4 {
+	font-size: 12px;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-message-counter {
+	background: #e62727;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+}
+
+.chat-close {
+	background: #1b2126;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;
+	margin: 2px 0 0 0;
+	text-align: center;
+	width: 16px;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 252px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message img {
+	border-radius: 50%;
+	float: left;
+}
+
+.chat-message-content {
+	margin-left: 56px;
+}
+
+.chat-time {
+	float: right;
+	font-size: 10px;
+}
+
+.chat-feedback {
+	font-style: italic;	
+	margin: 0 0 0 80px;
+}
+
+
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+.button {
+    background-color:black;
+    border:none;
+    color:white;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:30px;
+    padding: 5px 30px;}
+    
+button:hover {
+    opacity: 0.3;
+}
+   
+</style>
+
+</head>
+<body >
+
+<br><br>
+
+<div class="w3-content w3-display-container" style="width:100%;height:350px">
+  <img class="mySlides" src="bv.jpeg" style="width:100%;height:350px">
+  <img class="mySlides" src="c.jpg" style="width:100%;height:350px">
+  <img class="mySlides" src="lm.png" style="width:1000px;height:350px">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+<br><br<br>
+<div style="text-align:center;font-family:raleway">
+
+<a href="#contact"><button class="button"> Contact Us</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="button">About Us  </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="button">Immerse In </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="gallerym.html"><button class="button">Gallery </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="button">abcdef  </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</div>
+<center>
+<div class="text" style="font-family:raleway;background-color::#000000;opacity:0.7;border:0.5px solid grey;width:1000px;color:white;font-weight:bold;border-radius:40px;"><h2> Lose Yourself In Music!</h2>
+<p>Music is an art form and cultural activity whose medium is sound organized in time. The common elements of music are pitch (which governs melody and harmony, rhythm and its associated concepts tempo, meter, and articulation, dynamics (loudness and softness), and the sonic qualities of timbre and texture (which are sometimes termed the color of a musical sound). Different styles or types of music may emphasize, de-emphasize or omit some of these elements. Music is performed with a vast range of instruments and vocal techniques ranging from singing to rapping; there are solely instrumental pieces, solely vocal pieces (such as songs without instrumental accompaniment) and pieces that combine singing and instruments. The word derives from Greek  mousike; art of the Muses.</p>
+<p>
+In its most general form, the activities describing music as an art form or cultural activity include the creation of works of music (songs, tunes, symphonies, and so on), the criticism of music, the study of the history of music, and the aesthetic examination of music. Ancient Greek and Indian philosophers defined music as tones ordered horizontally as melodies and vertically as harmonies. Common sayings such as "the harmony of the spheres and it is music to my ears point to the notion that music is often ordered and pleasant to listen to. However, 20th-century composer John Cage thought that any sound can be music, saying, for example, "There is no noise, only sound."
+</p><p>
+The creation, performance, significance, and even the definition of music vary according to culture and social context. Indeed, throughout history, some new forms or styles of music have been criticized as not being music, including Beethoven's Grosse Fuge string quartet in 1825, early jazz in the beginning of the 1900s and hardcore punk in the 1980s. There are many types of music, including popular music, traditional music, art music, music written for religious ceremonies and work songs such as chanteys. Music ranges from strictly organized compositions–such as Classical music symphonies from the 1700s and 1800s, through to spontaneously played improvisational music such as jazz, and avant-garde styles of chance-based contemporary music from the 20th and 21st centuries.
+</p><p>
+Music can be divided into genres (e.g., country music) and genres can be further divided into subgenres (e.g., country blues and pop country are two of the many country subgenres), although the dividing lines and relationships between music genres are often subtle, sometimes open to personal interpretation, and occasionally controversial. For example, it can be hard to draw the line between some early 1980s hard rock and heavy metal. Within the arts, music may be classified as a performing art, a fine art or as an auditory art. Music may be played or sung and heard live at a rock concert or orchestra performance, heard live as part of a dramatic work (a music theater show or opera), or it may be recorded and listened to on a radio, MP3 player, CD player, smartphone or as film score or TV show.
+</p><p>
+In many cultures, music is an important part of people's way of life, as it plays a key role in religious rituals, rite of passage ceremonies  graduation and marriage, social activities (e.g., dancing) and cultural activities ranging from amateur karaoke singing to playing in an amateur funk band or singing in a community choir. People may make music as a hobby, like a teen playing cello in a youth orchestra, or work as a professional musician or singer. The music industry includes the individuals who create new songs and musical pieces (such as songwriters and composers), individuals who perform music (which include orchestra, jazz band and rock band musicians, singers and conductors), individuals who record music (music producers and sound engineers), individuals who organize concert tours, and individuals who sell recordings and sheet music and scores to customers.
+</p><p>Music is one of the most fundamental forms of human artistic expression. We have no way of knowing when humans started making music, as such origins are lost in the mists of prehistory, but humans have certainly been making music in one form or another for a very long time indeed. Whether it is simply chanting or drumming by one or two people or the collaboration of more than one hundred musicians in a full-sized orchestra, music is one of the most emotive and compelling forms of art.</p>
+<p>
+There are far too many styles, genres, subgenres, and traditions of music to list here; such an inventory would go on for hundreds of pages. Instead, this lesson will focus on three basic categories for producing and thinking about music: Western art music, folk music, and popular music.
+Western Art Music
+</p><p>
+This category of music refers to the family of styles and genres that have developed out of the Western art music and classical tradition. This category of music is sometimes simply referred to as classical music but this term is somewhat misleading as the classical period in Western art music was a specific era that lasted from about 1730 to 1820 and does not really apply to periods before or after that time.
+</p><p>
+Western art music is characterized by compositional sophistication, virtuosity on the part of individual musicians, use of standardized musical notation, and association with the educated elites of Europe. Indeed, this last element is perhaps Western art music's most definitive feature. Western art music from the Middle Ages onward has positioned itself as the cerebral, culturally refined alternative to the folk and dance music of the common people. While individual composers may not have been members of the European aristocracy, with few exceptions they were funded by and making music for either the aristocracy or the church.
+Folk Music
+</p><p>
+Folk music is not a genre, but rather a process through which music is produced. It is not composed by any one individual; instead, it is produced by a community over a period of time. Typically, folk music is constantly changing with additions being made while other elements are eliminated. Folk music can be understood to be the traditional music of any particular ethnic group or community that is passed down through informal means from one generation to the next.
+</p><p>
+Unlike Western art music, folk music is typically not notated or written down, although sometimes it can be. It is most often shared orally and taught from teacher to student by ear and can include anything from a cappella English ballads, to complex African drum patterns used for religious purposes, to the rich folk music traditions of South Asia involving sitars, tablas, and vocals. The key factors in distinguishing folk music traditions from other methods of musical production are its traditional basis and communal composition.
+Popular Music
+</p><p>
+Like folk music, popular music is not a genre, but rather a process through which music is produced, distributed, and consumed. Popular music refers to any form of music that is mass produced or distributed, particularly if the music in question was written specifically for commercial purposes. Popular music is composed with the intention of profiting from that music's mass distribution, either through the record industry or through other means, such as for films, television, or online.
+</p>
+<p>
+Rock music is perhaps the popular music genre par excellence, although genres like hip-hop, techno, and Bollywood soundtracks are also excellent examples. It can be argued that popular music did not really exist prior to the 19th century, when the recording and mass distribution of music first became possible.
+</p>
+<h4 id="contact"  style="font-family:raleway;">Contact Us</h4>
+Mr. Santosh Munish  email: santoshmunish@iiits.in<br>
+Ms. shruthi  email: shruthi.ms16@iiits.in<br>
+Mr. vishnav Murali email: murali.v15@iiits.in<br>
+Ms. sowmya Vasuki email: sowmyavasuki.j16@iiits.in<br><br><br>
+
+
+</div>
+</center>
+
+
+
+	<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>Navic</h4>
+
+			<span class="chat-message-counter">nav</span>
+
+		</header>
+
+		<div class="chat"><br><br>
+			<center>enter here where u wanna go....</center><br><br>
+			
+			<p class="chat-feedback">example:- homepage</p>
+
+			<form action="chatbot.php" method="post">
+
+				<fieldset>
+					<form>
+					<input type="text"  name="text" style="width:70%;"  placeholder="enter here..." autofocus >
+					<input type="submit" value="submit" style="background-color:black;color:white;width:20%;height:32px">
+					<input type="hidden">
+					</form>
+				</fieldset>
+
+			</form>
+
+		</div> <!-- end chat -->
+
+	</div> <!-- end live-chat -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+	
+	
+	(function() {
+
+	$('#live-chat header').on('click', function() {
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+	});
+
+	$('.chat-close').on('click', function(e) {
+
+		e.preventDefault();
+		$('#live-chat').fadeOut(300);
+
+	});
+
+}) ();
+	
+	</script>
+	
+	
+	
+
+
+</body>
+</html> 
+

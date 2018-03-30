@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+
+
+
+	<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+<style>
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  opacity:0.6;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+
+html { 
+  background: url(01.jpeg) no-repeat center fixed; 
+  background-size: cover;
+}
+
+
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+
+.button {
+    background-color:black;
+    border:none;
+    color:white;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:30px;
+    padding: 5px 30px;}
+    
+button:hover {
+    opacity: 0.5;
+}
+
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	
+	color: #9a9a9a;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 24px;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 16px 24px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat h4 {
+	font-size: 12px;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-message-counter {
+	background: #e62727;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+}
+
+.chat-close {
+	background: #1b2126;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;
+	margin: 2px 0 0 0;
+	text-align: center;
+	width: 16px;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 252px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message img {
+	border-radius: 50%;
+	float: left;
+}
+
+.chat-message-content {
+	margin-left: 56px;
+}
+
+.chat-time {
+	float: right;
+	font-size: 10px;
+}
+
+.chat-feedback {
+	font-style: italic;	
+	margin: 0 0 0 80px;
+}
+
+
+
+
+</style>
+
+</head>
+
+<body style="padding:7px">
+<br><br>
+<div class="w3-content w3-display-container" style="width:96%;height:350px">
+  <img class="mySlides fade" src="03.jpg" style="width:100%;height:350px">
+  <img class="mySlides fade" src="04.jpg" style="width:100%;height:350px">
+  <img class="mySlides fade" src="05.jpg" style="width:100%;height:350px">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center;font-family:raleway;">
+
+<button class="button">Contacts</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#about"><button class="button">About   </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="button">Immerse In </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="natureclubphotos.html"><button class="button">Gallery </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#ptv"><button class="button">places </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  
+</div>
+
+<br><br>
+<center>
+
+<div style="background-color: #000000;opacity:0.4;border:1px solid grey;width:1000px;font-family:raleway">
+<h3 style="color:white;opacity:1.0;font-family:raleway">Nature Club</h3>
+
+<div style="color:white;opacity:1.0;font-family:raleway">
+<p>
+<b>
+IIITS has one Nature club . All faculties and students are invited to be member and part of it.
+The aim and objective of the Nature Club is to protect the environment in the college and Sri City
+and adjoining areas and also to enhance the knowledge about environmental problems like pollution 
+of air, water and soil, soil conservation, deforestation, etc. So that the whole area may be kept CLEAN N GREEN. 
+Under the banner of Nature Club various activities are performed. It includes Seminars, invited lectures
+by the guest researchers, Afforestation, Plantations, and Watering and cleaning of plants, cares and help 
+to Domestic Animals & Birds etc. Essay competitions and chart preparation on environment are also organised. 
+We will be actively participating in Indian Roller conservation, creating awareness on Indian Roller as it's 
+just not only our State Bird but also our Sri City Bird. As Sri city is getting urbanised we are trying to have its 
+Niche not to be disturbed.Mission is to conserve and restore natural ecosystems, focusing on birds, insects and 
+other life and their habitats for the benefit of humanity and the earth's biological diversity.
+</b>
+</p>
+
+
+<p>
+
+<h4>Roller Conservation</h4>
+<b>
+We will be actively participating in Indian Roller conservation, 
+creating awareness on Indian Roller as it's just not only our State
+Bird but also our Sri City Bird. As Sri city is getting urbanised we are
+trying to have its Niche not to be disturbed.Mission is to conserve and restore 
+natural ecosystems, focusing on birds, insects and other life and their habitats
+for the benefit of humanity and the earth's biological diversity. 
+</b>
+</p>
+
+
+<p>
+<h4>Butterfly Garden</h4>
+
+<b>
+A Butterfly Garden project for people of all ages The Butterfly garden is an educational,
+therapeutic and recreational scheme, based initially on gardening, but later offering so much more.
+It is a project for people of all ages. It caters for those looking to escape the world, 
+those looking to re-enter it and some, who are still just looking. Its doors are open to 
+anyone without obligation.The Aims and Objectives of The Butterfly Garden to observe and 
+identify the characteristics of the life cycle of a butterfly.Broadly our aims are to offer
+diverse, stimulating and purposeful opportunity to any age people. Delivering a service 
+which offers education, recreation and therapy, in a cocktail that the individual finds
+comfortable. We welcome and value all.Our objective is to create a unit that is safe, 
+reliable and self sustaining.Data generating and protecting and creating interest and 
+also breeding some of the Critically Endangered Species
+</b>
+
+</p>
+
+
+<p>
+<h4>Bird Watching</h4>
+<b>
+IIIT, Sri City Mission is to conserve and restore natural ecosystems, focusing on birds, 
+other wildlife, and their habitats for the benefit of humanity and the earth's biological diversity.
+Data generating and protecting and creating interest and also to know its importance in humans life.
+</b>
+</p>
+
+
+<h3 id="about">About</h3>
+
+<p>
+<b>
+Nature, in the broadest sense, is the natural, physical, or material world or universe. "Nature" can refer to the phenomena of the physical world, and also to life in general. The study of nature is a large part of science. Although humans are part of nature, human activity is often understood as a separate category from other natural phenomena.
+</b>
+</p>
+<p>
+<b>
+The word nature is derived from the Latin word natura, or "essential qualities, innate disposition", and in ancient times, literally meant "birth". Natura is a Latin translation of the Greek word physis , which originally related to the intrinsic characteristics that plants, animals, and other features of the world develop of their own accord.The concept of nature as a whole, the physical universe, is one of several expansions of the original notion; it began with certain core applications of the word by pre-Socratic philosophers, and has steadily gained currency ever since. This usage continued during the advent of modern scientific method in the last several centuries.
+</b>
+</p>
+<p>
+<b>
+Within the various uses of the word today, "nature" often refers to geology and wildlife. Nature can refer to the general realm of living plants and animals, and in some cases to the processes associated with inanimate objects–the way that particular types of things exist and change of their own accord, such as the weather and geology of the Earth. It is often taken to mean the "natural environment" or wilderness–wild animals, rocks, forest, and in general those things that have not been substantially altered by human intervention, or which persist despite human intervention. For example, manufactured objects and human interaction generally are not considered part of nature, unless qualified as, for example, "human nature" or "the whole of nature". This more traditional concept of natural things which can still be found today implies a distinction between the natural and the artificial, with the artificial being understood as that which has been brought into being by a human consciousness or a human mind. Depending on the particular context, the term "natural" might also be distinguished from the unnatural or the supernatural.
+</b>
+</p>
+
+
+<p>
+<b>
+
+There are many sources of attractions around SriCity. The closest being the Sriharikota Island which is surrounded by the Pulicat Lake which is the biggest lake in India. There are many beautiful birds that swim and fly around the lakes in the Sriharikota Area. The Sriharikota forest is also very special and offers some marvelous views.
+</b>
+</p>
+
+
+
+<p>
+<b>
+The Sriharikota rocket launch station itself is located in the Sriharikota forest . Visitors interested in nature photography can bring along a camera and tripod to get some wonderful snaps of groups of birds in the Nelapattu & Pulicat Lake Bird Sanctuary. Boating is also available near Pulicat Lake. The Dutch Cemetery and Dutch Fort from the times gone by add a distinct flavor to the overall trip
+</b>
+</p>
+
+
+<h4 id="ptv">Places to visit</h4>
+<p>
+<b>
+
+
+Distance from Chennai : 60kms<br>
+<br>
+Places to see : PulicatLake, Bird sanctuary, Boating, Tada Falls, Sriharikota Rocket launch , Station & Forest, Dutch Cemetery & Dutch Fort, Pulicat Temples.<br>
+<br>
+Mode of transport : Cars, Van, Mini-Bus or Bikes. Suburban trains from Chennai Central.<br>
+<br>
+Route from Chennai : Chennai - Red hills - Sricity -Sullurpeta -Sriharikota. <br>
+
+
+</b>
+</p>
+
+
+
+</div>
+</div>
+
+
+</center>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"  style="font-family:raleway">Top</button>
+
+
+<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>Navic</h4>
+
+			<span class="chat-message-counter">nav</span>
+
+		</header>
+
+		<div class="chat"><br><br>
+			<center>enter here where u wanna go....</center><br><br>
+			
+			<p class="chat-feedback">example:- homepage</p>
+
+			<form action="chatbot.php" method="post">
+
+				<fieldset>
+					<form>
+					<input type="text"  name="text" style="width:70%;"  placeholder="enter here..." autofocus >
+					<input type="submit" value="submit" style="background-color:black;color:white;width:20%;height:32px">
+					<input type="hidden">
+					</form>
+				</fieldset>
+
+			</form>
+
+		</div> <!-- end chat -->
+
+	</div> <!-- end live-chat -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+	
+	
+	(function() {
+
+	$('#live-chat header').on('click', function() {
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+	});
+
+	$('.chat-close').on('click', function(e) {
+
+		e.preventDefault();
+		$('#live-chat').fadeOut(300);
+
+	});
+
+}) ();
+	
+	</script>
+	
+	
+
+
+
+
+<script>
+// When the user scrolls down 55px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 55 || document.documentElement.scrollTop > 55) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+
+
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+   
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+
+
+}
+</script>
+
+</body>
+</html> 
+

@@ -1,0 +1,1258 @@
+
+<!DOCTYPE html>
+<html>
+
+
+<head>
+
+
+<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+
+
+
+<title>home1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+<style>
+
+
+
+
+
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	/*<!--background: #e9e9e9;-->*/
+	color: #9a9a9a;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 24px;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 16px 24px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat h4 {
+	font-size: 12px;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-message-counter {
+	background: #e62727;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+}
+
+.chat-close {
+	background: #1b2126;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;
+	margin: 2px 0 0 0;
+	text-align: center;
+	width: 16px;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 252px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message img {
+	border-radius: 50%;
+	float: left;
+}
+
+.chat-message-content {
+	margin-left: 56px;
+}
+
+.chat-time {
+	float: right;
+	font-size: 10px;
+}
+
+.chat-feedback {
+	font-style: italic;	
+	margin: 0 0 0 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    margin: 0;
+    font-family:raleway;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0, 0.9);
+    overflow-y: hidden;
+    transition: 3s;
+}
+
+.overlay-content {
+    position: relative;
+    top: 8%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 8px;
+    right: 30px;
+    font-size: 40px;
+    color:red;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
+  .overlay a {font-size: 2px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+	 background-color: rgba(100,100,100,0.7);
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #000000;
+    color:white;
+}
+
+.button {
+    background-color: orange;
+    border:none;
+    color: white;
+    padding: 10px 42px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+.button1 {
+    background-color: orange;
+    border:none;
+    color: white;
+    padding: 7px 50px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+
+
+
+
+/*body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}*/
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('building.jpg');
+    min-height: 70%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("400.jpg");
+    min-height: 400px;
+    width:100%;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("500.jpg");
+    min-height: 400px;
+     width:100%;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+
+
+
+
+
+
+#navbar {
+  overflow: hidden;
+  background-color: rgb(0,0,0);
+}
+
+
+
+#navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+#navbar a.active {
+  background-color: rgb(230,255,230);
+  color: grey;
+}
+
+.content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%
+}
+
+.sticky + .content {
+  padding-top: 60px;
+}
+
+
+
+
+
+
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+	 background-color: rgba(100,100,100,0.7);
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.button1 {
+    background-color: #000000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #000000;
+    color:white;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+.imgcontainer2 {
+    text-align: center;
+    position: relative;
+}
+
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+    opacity :0.6; 
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+    text-decoration:none;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    padding-top: 30px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: rgba(100,100,100,0.7);
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 0.1px solid black;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 17px;
+  font-family: Raleway;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 0.8;
+}
+
+
+
+#regForm {
+  background-color: rgba(100,100,100,0.7);
+  margin: 100px auto;
+  font-family: Raleway;
+  padding: 10px;
+  width: 50%;
+  min-width: 600px;
+  height:600px;
+}
+h1 {
+  text-align: center;  
+}
+
+
+
+
+
+
+
+
+
+
+#ls {
+  width: 100%;
+  height:100px;
+ 
+  background-color:white;
+}
+
+.content {
+  position: absolute;
+  top: 98%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 160px;
+  overflow: hidden;
+  font-family: 'Lato', sans-serif;
+  font-size: 35px;
+  line-height: 40px;
+  color: black;
+}
+.content__container {
+  font-weight: 600;
+  overflow: hidden;
+  height: 40px;
+  padding: 0 40px;
+}
+.content__container:after, .content__container:before {
+  position: absolute;
+  top: 0;
+  color: #16a085;
+  font-size: 42px;
+  line-height: 40px;
+  -webkit-animation-name: opacity;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.content__container__text {
+  display: inline;
+  float: left;
+  margin: 0;
+}
+.content__container__list {
+  margin-top: 0;
+  padding-left: 110px;
+  text-align: left;
+  list-style: none;
+  -webkit-animation-name: change;
+  -webkit-animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+  animation-name: change;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+.content__container__list__item {
+  line-height: 40px;
+  margin: 0;
+}
+
+@-webkit-keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes change {
+  0%, 12.66%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    -webkit-transform: translate3d(0, -25%, 0);
+            transform: translate3d(0, -25%, 0);
+  }
+  33.32%,45.98% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  49.98%,62.64% {
+    -webkit-transform: translate3d(0, -75%, 0);
+            transform: translate3d(0, -75%, 0);
+  }
+  66.64%,79.3% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  83.3%,95.96% {
+    -webkit-transform: translate3d(0, -25%, 0);
+            transform: translate3d(0, -25%, 0);
+  }
+}
+@keyframes opacity {
+  0%, 100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes change {
+  0%, 12.66%, 100% {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+  }
+  16.66%, 29.32% {
+    -webkit-transform: translate3d(0, -25%, 0);
+            transform: translate3d(0, -25%, 0);
+  }
+  33.32%,45.98% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  49.98%,62.64% {
+    -webkit-transform: translate3d(0, -75%, 0);
+            transform: translate3d(0, -75%, 0);
+  }
+  66.64%,79.3% {
+    -webkit-transform: translate3d(0, -50%, 0);
+            transform: translate3d(0, -50%, 0);
+  }
+  83.3%,95.96% {
+    -webkit-transform: translate3d(0, -25%, 0);
+            transform: translate3d(0, -25%, 0);
+  }
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+</head>
+
+<body  onscroll="myFunction()">
+
+<script>
+
+alert("registered sucessfully! we'll try to solve it sonn... ");
+
+</script>
+
+
+<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>Navic</h4>
+
+			<span class="chat-message-counter">nav</span>
+
+		</header>
+
+		<div class="chat"><br><br>
+			<center>enter here where u wanna go....</center><br><br>
+			
+			<p class="chat-feedback">example:- homepage</p>
+
+			<form action="chatbot.php" method="post">
+
+				<fieldset>
+					<form>
+					<input type="text"  name="text" style="width:70%;"  placeholder="enter here..." autofocus >
+					<input type="submit" value="submit" style="background-color:black;color:white;width:20%;height:32px">
+					<input type="hidden">
+					</form>
+				</fieldset>
+
+			</form>
+
+		</div> <!-- end chat -->
+
+	</div> <!-- end live-chat -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+	
+	
+	(function() {
+
+	$('#live-chat header').on('click', function() {
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+	});
+
+	$('.chat-close').on('click', function(e) {
+
+		e.preventDefault();
+		$('#live-chat').fadeOut(300);
+
+	});
+
+}) ();
+	
+	</script>
+	
+
+
+
+
+
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <div class="overlay-content" style="font-size:2px">
+   
+   
+    <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='contactspage.html';"><img src ="contacts.png" style="width:100px;height:100px;" ></button>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='music.html';"><img src ="music.png" style="width:100px;height:100px;"></button><br><br>
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='sub.html';"><img src ="subject.png" style="width:100px;height:100px;"></button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4"  onclick="location.href='code.html';"><img src ="coding.png" style="width:100px;height:100px;"></button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="w3-button w3-large w3-circle w3-red w3-card-4"  onclick="location.href='nature.html';"><img src ="nature.png" style="width:100px;height:100px;"></button><br><br>
+    <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='cafechange.html';"><img src ="cafe.png"style="width:100px;height:100px;"></button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='kayaking.html';"><img src ="kayaking.png"style="width:100px;height:100px;"></button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='sports.html';"><img src ="sports.png"style="width:100px;height:100px;"></button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4"  onclick="location.href='photography2.html';"><img src ="photo.png" style="width:100px;height:100px;"></button><br><br>
+   
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4"  onclick="location.href='news.html';"><img src ="news.png" style="width:100px;height:100px;"></button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4"  onclick="location.href='bus.pro.html';"><img src ="bus.png" style="width:100px;height:100px;"></button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='trekking.html';"><img src ="trek.png" style="width:100px;height:100px;"></button><br><br>
+   
+    <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='messpage.html';"><img src ="mess.png" style="width:100px;height:100px;"></button>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+   <button class="w3-button w3-large w3-circle w3-red w3-card-4" onclick="location.href='timetable.html';"><img src ="gallery.png" style="width:100px;height:100px;"></button><br>
+    
+   
+   
+    
+    
+    
+    
+    
+   
+  </div>
+</div>
+
+
+
+
+
+
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1" id="home">
+  <div style="white-space:nowrap;font-size:35px;"><br><br><center><img src="iiits-2.png" ><br><br>
+   Indian Institute Of Information Technology, Sri City<br>
+   </center>
+  
+  </div>
+ </div>
+
+
+<!-- navigation bar -->
+
+
+<div id="navbar" style="height:60px">
+
+
+
+<span style="font-size:30px;cursor:pointer;float:center" onclick="openNav()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9776;</span>
+
+
+  	<a href="home1.html"><button type="button" class="button"  style="width:auto;float:right">Log Out</button></a>
+  
+</div>
+
+
+
+
+
+
+<div id="ls">
+<div class="content">
+  <div class="content__container">
+    <p class="content__container__text">
+      Here we
+    </p>
+    
+    <ul class="content__container__list">
+      <li class="content__container__list__item">&nbsp;do !</li>
+      <li class="content__container__list__item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can !</li>
+      <li class="content__container__list__item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;be !</li>
+      <li class="content__container__list__item">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;achieve !</li>
+    </ul>
+ </div>
+</div>
+</div>
+
+<script>
+function openNav() {
+    document.getElementById("myNav").style.height = "100%";
+}
+
+function closeNav() {
+    document.getElementById("myNav").style.height = "0%";
+}
+</script>
+     
+
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT US</h3>
+  <p class="w3-center"><em>Today, Tommorow, Together</em></p>
+  <p>Indian Institute of Information Technology Chittoor at Sri City, known as IIITS, is an institute of national importance and a pinnacle of technology education standards in India. The Institute is governed by distinguished academicians, industry leaders and senior government officials, referred to as the Board of Governors. Additionally, IIIT Hyderabad and IIT Hyderabad are the mentor institutions for IIIT Sri City. In fact, The Institute follows a similar curriculum and pedagogy as IIIT Hyderabad.</p>
+  
+  <p>IIITS was established under the Government of India’s Initiative to set up 20 Institutes across India, focused on Information Technology. The Institute was setup by the Government of India – MHRD, Government of Andhra Pradesh and Industry Partners (Sri City Foundation) as a Not-for-Profit Public-Private-Partnership. The Institute was funded 50 percent by the Government of India, 35 percent by the Government of Andhra Pradesh and 15 percent by the Industry Partners.</p>
+  
+  
+  <p>Our Campus spread across 80 acres and equipped with state-of-the-art Infrastructure is coming up in Sri City. The Campus will match international standards, while keeping in mind the culture and values of India. Sri City is an emerging Smart City and the hub for over 100 MNC’s from 25 Countries.
+
+</p><br><br>
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">600+</span><br>
+    Student Body
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">66</span><br>
+    Courses
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">76</span><br>
+    Research Papers
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">13</span><br>
+    Community Projects
+  </div>
+</div>
+
+
+
+
+
+<!-- second Parallax Image -->
+<div class="bgimg-2" id="home" width="100%;">
+ 
+ </div>
+
+
+
+
+ <br><br><br>
+ <p>
+Indian Institute of Information Technology at Sri City offers the following Undergraduate Programs, which are focused on Information Technology:</p>
+
+   <p> Bachelor in Technology with Major in Computer Science and Engineering (200 Seats)
+    Bachelor in Technology with Major in Electronics and Communication Engineering (70 Seats)</p>
+
+<p>IIITS follows a similar curriculum as IIIT-Hyderabad and leading American and European Universities. Unlike regular Engineering Institutions which follow class-room based learning and examination based grading, we focus on problem-solving, real-world projects and group education at IIITS. The Institute provides its students the opportunity to select courses and projects of their Choice. The Institute also allows provides its students the opportunity to participate in variety of research, technology development and community Programs. Overall, The Institute curriculum is modern, competitive and demands hard-work from each Student. Note that admission to Undergraduate Programs is done once a year during the Monsoon Semester.
+
+
+</p>
+
+<!-- third Parallax Image -->
+<div class="bgimg-3" id="home" width="100%;">
+ 
+ </div>
+<p>
+
+What does one look for in a College? Education, Placement. In addition, we at IIITS believe in providing our students with opportunities for All-Round Development. We encourage our students to conduct research, lead community projects, build startups, develop new products and services, become the next arts or sports star, Name It! IIITS is truly a revolution in the field of it education in India. Our faculty believes that in addition to textbooks, research and real-life experiences are the new keystones for Education. So, ask yourself are you up for the Challenge?</p>
+<p>
+Our campus constitutes of first-grade infrastructure and is set to be opened in Sri City. In the meanwhile, the institute is functioning from the campus of Institute of Financial Management Research at Sri City.
+
+</p>
+<center>
+<button  type="button" class="button">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gallery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button  type="button" class="button" onclick="document.getElementById('id0x').style.display='block'">complaint registration</button>
+</center>
+<br><br>
+<!--<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">600+</span><br>
+    Student Body
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">66</span><br>
+    Courses
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">76</span><br>
+    Research Papers
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">13</span><br>
+    Community Projects
+  </div>
+</div>-->
+
+
+
+
+<script>
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+<div id="id0x" class="modal">
+  
+  <form class="modal-content animate" action="complaint.php" method="post">
+    
+    <div class="container">
+    
+     <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Cancel">&times;</span>
+    
+    </div>
+
+    
+    
+    <br><br>
+      <label><b>User Email:</b></label>&nbsp;
+      <input type="email" placeholder="  Enter Email Id" name="email" style="background-color:rgb(0, 0, 0);border-radius:35px;color:white;"  required>
+      <br><br><br>
+     <label><b>TO be submitted to</b></label>
+     
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    
+<div class="styled-select black rounded" style="float:right;">
+  <select name="option">
+    <option>Admin Office</option>
+    <option>Hostel Committe</option>
+    <option>CLC of the class</option>
+  </select>
+</div><br>
+
+   <textarea placeholder="enter your grevience..." name="comp"></textarea>
+    <center>       
+      <input type="submit" class="button1" style="border-radius:30px;" value="submit">
+     </center>
+    </div>
+
+  </form>
+</div>
+
+
+
+
+
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Cancel">&times;</span>
+      <img src="iiits-2.png" alt="Aalasy" class="avatar">
+    </div>
+
+    <div class="container">
+      <label><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" name="uname" style="background-color:rgba(100,100,100,0.8)"  required>
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw"  style="background-color:rgba(100,100,100,0.8)" required>
+        
+      <input type="checkbox" checked="checked"> Remember me<br>
+   <center>
+      <button type="submit" class="button">Login</button>
+   </center>
+    </div>
+
+  </form>
+</div>
+
+
+
+<div id="id02" class="modal">
+	
+    <div  id="regForm">
+    
+    <div class="imgcontainer2" style="font-size:100px;">
+	 <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Cancel">&times;</span>
+  </div><br>
+    
+      <h1>Register!</h1>
+      <br>
+      <form  action="register7.php" method="post">
+      
+       <span style="font-size:30px">First Name:</span>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="text" name="fname" style="width:50%;opacity:0.7;"><br>
+       
+       
+       <span style="font-size:30px">Last Name:</span>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="text" name="lname" style="width:50%;opacity:0.7;"><br>
+       
+       
+       <span style="font-size:30px">Birthday:</span>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       
+       						<input type="number" name="dd" style="width:10%;background-color:gray;opacity:0.5;border:1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;		
+       						&nbsp;&nbsp;&nbsp;&nbsp;
+				       		<input type="number" name="nn" style="width:10%;background-color:gray;opacity:0.5;border:1px solid black;">&nbsp;&nbsp;&nbsp;&nbsp;
+				       		&nbsp;&nbsp;&nbsp;&nbsp;
+				       		<input type="number" name="yyyy" style="width:10%;background-color:gray;opacity:0.5;border:1px solid black;"><br>
+       
+       
+       
+       
+       <span style="font-size:30px">Username:</span>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="text" name="uname" style="width:50%;opacity:0.7;"><br>
+       
+       
+       <span style="font-size:30px">Create Password:</span>
+       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+       <input type="text" name="pword"  style="width:50%;opacity:0.7;"><br>
+        <br><br>
+        <center><input type="submit" class="button" value="Register!"></center>
+      </form>
+    </div>
+</div>
+<br><br>
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  
+  <div style="text-align:center">
+<br><br>
+<img src ="twitter.png" style="width:20px;">
+<a href="https://www.facebook.com/IIIT.SriCity/"><img src ="facebook.png" style="width:20px;"></a>
+<img src ="inst.png" style="width:20px;">
+<span style ="color:white;font-family:raleway;">|<b>  MADE  BY  AALASYA  TEAM  IIIT  SRICITY |   ITWS 1   PROJECT</b></span><br><br> 
+</div>
+</footer>
+
+<script>
+
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+
+
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+</script>
+
+
+
+<script>
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+</script>
+
+<script>
+
+// Get the modal
+var modal = document.getElementById('id0x');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+<script>
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

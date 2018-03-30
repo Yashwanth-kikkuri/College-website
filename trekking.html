@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+	<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+<style>
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	/*<!--background: #e9e9e9;-->*/
+	color: #9a9a9a;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 24px;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 16px 24px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat h4 {
+	font-size: 12px;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-message-counter {
+	background: #e62727;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+}
+
+.chat-close {
+	background: #1b2126;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;
+	margin: 2px 0 0 0;
+	text-align: center;
+	width: 16px;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 252px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message img {
+	border-radius: 50%;
+	float: left;
+}
+
+.chat-message-content {
+	margin-left: 56px;
+}
+
+.chat-time {
+	float: right;
+	font-size: 10px;
+}
+
+.chat-feedback {
+	font-style: italic;	
+	margin: 0 0 0 80px;
+}
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  opacity:0.1;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+
+html { 
+  background: url(trekking.jpeg) no-repeat center fixed; 
+  background-size: cover;
+}
+
+
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+
+.button {
+    background-color:black;
+    border:none;
+    color:white;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:30px;
+    padding: 5px 30px;}
+    
+button:hover {
+    opacity: 0.5;
+}
+
+
+</style>
+
+</head>
+
+<body style="padding:7px">
+<br><br>
+<div class="w3-content w3-display-container" style="width:96%;height:350px">
+  <img class="mySlides fade" src="trek3.jpeg" style="width:100%;height:350px">
+  <img class="mySlides fade" src="trek2.jpeg" style="width:100%;height:350px">
+  <img class="mySlides fade" src="trek1.jpeg" style="width:100%;height:350px">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center;font-family:raleway;">
+
+<a href="#contact"><button class="button">Contacts</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#about"><button class="button">About   </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#out"><button class="button">Outcomes </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#ptv"><button class="button"> places </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  
+</div>
+
+<br><br>
+<center>
+
+<div style="background-color: #000000;opacity:0.4;border:1px solid grey;width:1000px;font-family:raleway">
+<h3 style="color:white;opacity:1.0;font-family:raleway">Trekking Club</h3>
+
+<div style="color:white;opacity:1.0;font-family:raleway">
+<p>
+<b>
+The Trekking Club Program at Indian institute of Information Technology is comprised of trekking 
+clubs formed, developed, governed, and administered by the 
+student membership working in 
+conjunction with the Office of Intramurals and Recreation, a unit of the Division of Student 
+Life.
+The key to the success of this program is student leadership, interest, involvement, and 
+participation. The Trekking Club Council
+with advisement of the Office of Intramurals and 
+Recreation has created this manual in order to provide officers with the structural framework 
+necessary for clubs to gain recognition, develop leadership skills, and run safe, efficient 
+programs.
+The policies and procedures contained herein apply to all of the clubs. Trekking club members, 
+officers, and the faculty/staff advisor are required to read, understand, and follow the 
+procedures outlined in this manual. Questions regarding the policies and procedures within this 
+manual should be directed to the 
+Mentor
+of Intramurals and Recreation or the Trekking Club.
+</b>
+</p>
+
+
+<pre>
+
+<h4>Objectives</h4> <br>
+<i>
+* Developing an understanding of the natural world has always been a key 
+  component of TREK. Students are provided with direct experiences that 
+  enable them to integrate their learning into the wider world and make
+  personal connections.
+
+* Emphasizing hands-on, real-world learning experiences, this approach to 
+  education [place-based learning] increases academic achievement, helps students
+  develop stronger ties to their community, enhances students appreciation for the
+  natural world, and creates a heightened commitment to serving as active
+  contributing citizens.
+</i> <br>
+</pre>
+
+
+
+
+<pre>
+<h3 id="out">Outcomes</h3>
+<i>
+* Wildlife encounters
+
+  Does the idea of walking in remote wilderness as wombats cross the  
+  trail ahead, wedge tailed eagles fly above and padmelons hop around the
+  campsite as the sun sets in the distance appeal to you? We don’t blame you! 
+  This is one of the many wildlife scenarios that trekkers encounter on the 
+  Overland Track in Tasmania, where a visit into the wilderness also equates 
+  to a visit into the wildlife homeland! Wildlife and bird watching is one of
+  the many highlights while on a trek, and can give a unique insight into the
+  ecosystems of a destination.
+</i>
+
+<i>
+* Softer skill development
+
+  The benefits of trekking don’t just apply to your physical, mental or social
+  health – it can also benefit your management skills, believe it or not! ,
+  When planning your trek, you may find yourself setting training targets, 
+  planning for the trek, organising your schedule, setting goals, learning 
+  how to adapt to change and developing your mental strength. These are all 
+  skills that are highly valued in the working world, and can be a foundation 
+  for personal growth that you may surprise you with a newfounded self confidence!
+</i>
+
+<i>
+* Reduces Stress
+
+  It’s hard to argue with science. A study in the The Proceedings of the National
+  Acadamy of Science found that that “exposure to nature can counteract the negative
+  effects of stress and anxiety: Those who completed the nature walk tended toward less
+  rumination—the acute focus on one’s distress—than those who took the urban route”. 
+  Spending time outdoors on a trek or active holiday in nature is a perfect way to cleanse
+  your mind from the stress and worries from home. Trekking often requires a person to be
+  focussed on their activity, where the only distractions are majestic vistas and dramatic scenery.
+  Ask any trekker and they’ll attest that spending time in the wilderness was one of the most
+  relaxing times they’ve had.
+</i>
+
+</pre>
+
+
+
+
+
+
+
+
+<h3 id="about">About</h3>
+
+<pre>
+<i>
+* Trekking is about walking in the hills and camping. Carrying all 
+  your requirements like food, clothes and shelter with you as you
+  move along a trail.
+
+* It is one of the ways to visit places which offer great panoramic 
+  views and pleasant environs. The places which one can visit only 
+  by walking, since there are no roads up to these places. It brings 
+  one closer to the nature and brings the best out of an individual.
+  For a complete answer one has to go on a trek or camp to find out the
+  joys and advantages of going to the wild.
+
+*  One can certainly do trekking all alone. But for this you must have
+   sufficient knowledge of all aspects of trekking and survival. However,
+   it is advisable to do trekking in group to take care of all the eventualities
+   one may encounter during the outing in the wild.
+</i>
+</pre>
+
+
+
+<div id="ptv">
+<br><br>
+<h3> PLACES WORTH VISITING BEFORE YOU DIE</h3> <br><br>
+<h4> @Singalila Kanchenjunga Trek </h4>
+<pre>
+<i>
+ The Singalila Trek is the most admired trek in Sikkim to bring the trekkers
+ at the foot of Mt. Kanchenjunga. The Singalila Trek in Sikkim covers the 
+ political boundary of Nepal and Sikkim and brings the ancient Himalayan Kingdom
+ of Tibetan culture. The trek that brings the breath-taking views of the Himalayan
+ range in spite of the presence of some barren landscape; being devoid of any trees
+ and boasts of rocky hills but still the charm and the placid atmosphere is the 
+ adequate reason to captivate tremendous trekkers all around the valleys.
+
+ The folds and grassy meadow of Singalila adds delight to trekking
+ at Singalila to bring a blissful environment. The presence of
+ astounding lakes all around the Singalila region add a perfect charm
+ to the ambience of trekking in Sikkim.
+</pre>
+</i>
+<div><br><br>
+
+<h4> @Zanskar Frozen River Trek </h4>
+<pre>
+<i>
+ Walking on the ice-covered river of Zanskar is an ultimate experience 
+ for adventure freaks that are keen to do trekking in the Indian Himalayas.
+ This trek is also named as Chadar trek, which means blanket. Spring water
+ prevents this icy blanket from completely smothering the river, which in
+ some places, retains its rapids; all the more awesome in temperature of 
+ -25 to –30 degrees. The trek goes by shuffling along the Chadar that breaks
+ and changes color on the river every few hours! A magnificent and at times
+ challenging trek, with opportunities to relish ancient Buddhist monasteries
+ and secluded villages nestled in the depths of the deep gorges valley of
+ Trans Zanskar ranges. At places, the Chadar (ice sheet) does not form over the river.
+
+ Then, the trekkers have to forge a new trail trekking over snow-covered banks
+ to move down to a spot on the Zanskar river, where the ice is more stable.
+ What sets this trek apart is its matchless experience. Everything about it is
+ exceptional: the panorama, atmosphere, the frozen river, caves, unusual campsites,
+ sledges and the ever changing Chadar.
+</pre>
+</i>
+<div><br><br>
+
+<h4> @Mandani Bugyal  </h4>
+<pre>
+<i>
+ For some, a sword and sorcery teaming with ancient lyricism, while for others
+ a fabulous tale of good over evil, Mahabharata is a triumph when it comes to narratives.
+ If ever given an award for the most incredible tale ever told – then the story of 
+ the Mahabharata would be the sure shot winner. It is so extraordinary that it has made
+ numerous people speculate – ‘Did it really happen? Well, there are many places in India
+ that have yielded archaeological evidence and have been identified as ancient cities 
+ described in the Mahabharata. 
+
+ One unique place that this blog will bring to your notice is Mandani Bugyal,
+ which is approximately 35 kilometers from Ranshi village in Kedarnath Valley.
+ And a trekkers paradise too. Hardly known to people, and largely neglected by the authorities,
+ Mandani Bugyal too has a history that dates back to Pandavas and said to have been
+ crossed by them before their final ascent to Swargarohini.
+</pre>
+</i>
+<div><br><br>
+
+
+
+<h3 id="contact">Contact Us</h3>
+<pre>
+Mr. Sanjay Sahu
+Mentor
+sanjay.sahu@iiits.in
+Staff
+
+
+Mr.Sumanth
+President
+Sumanth.m15@iiits.in
+UG-3
+
+
+
+Mr. Uday Raj
+Vice President
+udayraj.s16@iiits.in
+UG-2
+
+
+
+Mr.Raja Ram .V
+Secretary 
+rajaramachandrara.v16@iiits.in
+UG-2
+
+
+
+Ms. Parkhi Mohan
+Joint Secretary
+Parkhi.m16@iiits.in
+UG-2
+
+
+</pre>
+</div>
+</div>
+
+
+</center>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"  style="font-family:raleway">Top</button>
+
+
+
+
+<script>
+// When the user scrolls down 55px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 55 || document.documentElement.scrollTop > 55) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+
+
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+   
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+
+
+
+}
+</script>
+
+
+
+	<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>Navic</h4>
+
+			<span class="chat-message-counter">nav</span>
+
+		</header>
+
+		<div class="chat"><br><br>
+			<center>enter here where u wanna go....</center><br><br>
+			
+			<p class="chat-feedback">example:- homepage</p>
+
+			<form action="chatbot.php" method="post">
+
+				<fieldset>
+					<form>
+					<input type="text"  name="text" style="width:70%;"  placeholder="enter here..." autofocus >
+					<input type="submit" value="submit" style="background-color:black;color:white;width:20%;height:32px">
+					<input type="hidden">
+					</form>
+				</fieldset>
+
+			</form>
+
+		</div> <!-- end chat -->
+
+	</div> <!-- end live-chat -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+	
+	
+	(function() {
+
+	$('#live-chat header').on('click', function() {
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+	});
+
+	$('.chat-close').on('click', function(e) {
+
+		e.preventDefault();
+		$('#live-chat').fadeOut(300);
+
+	});
+
+}) ();
+	
+	</script>
+	
+	
+	
+
+
+</body>
+</html> 
+

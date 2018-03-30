@@ -1,0 +1,1838 @@
+<!DOCTYPE html>
+<html>
+<title>Swathi Cafe</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<style>
+body,h1,h5 {font-family: "Raleway", sans-serif}
+body, html {height: 100%}
+.bgimg {
+    background-image: url('background.jpg');
+    min-height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+</style>
+
+
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 5%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color:white;
+    font-size:20px;
+    font-style:italic;
+    color: black;
+    padding: 0px;
+    margin: 2px ;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f30a07;
+}
+
+.orderbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #47bd2d;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+    position: relative;
+}
+
+img.avatar {
+    width: 40%;
+    border-radius: 50%;
+}
+
+.container {
+    padding: 16px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 25%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)} 
+    to {-webkit-transform: scale(1)}
+}
+    
+@keyframes animatezoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+       display: block;
+       float: none;
+    }
+    .cancelbtn {
+       width: 100%;
+    }
+}
+</style>
+
+
+<body>
+
+<div class="bgimg w3-display-container w3-text-white">
+  <div class="w3-display-middle w3-jumbo">
+    <p><i><b>Swathi Cafe</i></b></p>
+  </div>
+  <div class="w3-display-topleft w3-container w3-xlarge">
+    <p><button onclick="document.getElementById('menu').style.display='block'" class="w3-button w3-black">Menu</button></p>
+    <p><button onclick="document.getElementById('contact').style.display='block'" class="w3-button w3-black">Contact</button></p>
+  </div>
+  <div class="w3-display-bottomleft w3-container">
+    <p class="w3-xlarge">Monday - Sunday 10-23 </p>
+    <p class="w3-large">IFMR,Sricity,Chittoor</p>
+    
+  </div>
+</div>
+
+<!-- Menu Modal -->
+<div id="menu" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black w3-display-container">
+      <span onclick="document.getElementById('menu').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Veg Starters</h1>
+    </div>
+    <div class="w3-container">
+
+
+
+
+<div>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">French Fries <b>₹20.00</b></button>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar" font-size="20px"> <center>FRENCH FRIES<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot1" onchange="cost1();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost1()
+       {
+        var x=document.getElementById('cot1').value;
+        var y=20*x;
+        document.getElementById('disp1').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp1"> 20 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+
+
+
+<div>
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Veg S/W <b>₹25.00</b></button>
+
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>VEG SANDWICH<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot2" onchange="cost2();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost2()
+       {
+        var x=document.getElementById('cot2').value;
+        var y=25*x;
+        document.getElementById('disp2').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp2"> 25 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id02');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+
+
+
+
+
+
+
+<div>
+<button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">Veg Grilled S/W<b>₹30.00</b></button>
+
+<div id="id03" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar" font-size="20px"> <center>VEG GRILLED SANDWICH<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot3" onchange="cost3();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost()
+       {
+        var x=document.getElementById('cot3').value;
+        var y=30*x;
+        document.getElementById('disp3').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp3"> 30 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id03');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+
+
+
+<div>
+<button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">Veg Cheese Sandwich <b>₹35.00</b></button>
+
+<div id="id04" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>VEG CHEESE S/W<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot4" onchange="cost4();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost4()
+       {
+        var x=document.getElementById('cot4').value;
+        var y=35*x;
+        document.getElementById('disp4').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp4"> 35 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id04').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id04');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+
+
+       
+
+ 
+
+<div>
+<button onclick="document.getElementById('id05').style.display='block'" style="width:auto;">Baby Corn-65 <b>₹50.00</b></button>
+
+<div id="id05" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id05').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>BABY CORN-65<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot5" onchange="cost5();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost5()
+       {
+        var x=document.getElementById('cot5').value;
+        var y=50*x;
+        document.getElementById('disp5').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp5"> 50</span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id05').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id05');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+
+
+
+
+
+
+<div>
+<button onclick="document.getElementById('id06').style.display='block'" style="width:auto;">Gobi-65<b>₹45.00</b></button>
+
+<div id="id06" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id06').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>GOBI-65<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot6" onchange="cost6();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost6()
+       {
+        var x=document.getElementById('cot6').value;
+        var y=45*x;
+        document.getElementById('disp6').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp6"> 45 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id06').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id06');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+
+
+
+    </div>
+    <div class="w3-container w3-black">
+    <h1>Non-Veg Starters</h1>
+    </div>
+    <div class="w3-container">
+    
+    
+    
+    
+ <div>
+<button onclick="document.getElementById('id07').style.display='block'" style="width:auto;">Bread Omlett <b>₹35.00</b></button>
+
+<div id="id07" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id07').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>BREAD OMLETT<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot7" onchange="cost7();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost7()
+       {
+        var x=document.getElementById('cot7').value;
+        var y=35*x;
+        document.getElementById('disp7').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp7"> 35 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id07').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id07');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+   
+      
+ 
+ <div>
+<button onclick="document.getElementById('id08').style.display='block'" style="width:auto;">Chilly Chicken <b>₹60.00</b></button>
+
+<div id="id08" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id08').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>CHILLY CHICKEN<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot8" onchange="cost8();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost8()
+       {
+        var x=document.getElementById('cot8').value;
+        var y=60*x;
+        document.getElementById('disp8').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp8"> 60 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id08').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id08');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+        
+      
+    
+    
+ 
+<div>
+<button onclick="document.getElementById('id09').style.display='block'" style="width:auto;">Chicken-65 <b>₹60.00</b></button>
+
+<div id="id09" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id09').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>CHICKEN-65<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cot9" onchange="cost9();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function cost9()
+       {
+        var x=document.getElementById('cot9').value;
+        var y=60*x;
+        document.getElementById('disp9').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="disp9"> 60 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id09').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id09');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+    
+
+
+<div>
+<button onclick="document.getElementById('id0A').style.display='block'" style="width:auto;">Pepper Chicken <b>₹60.00</b></button>
+
+<div id="id0A" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0A').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>PEPPER CHICKEN<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotA" onchange="costA();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costA()
+       {
+        var x=document.getElementById('cotA').value;
+        var y=60*x;
+        document.getElementById('dispA').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispA"> 60 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0A').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0A');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+        
+              
+ 
+ 
+
+<div>
+<button onclick="document.getElementById('id0B').style.display='block'" style="width:auto;">Butter Chicken Masala <b>₹70.00</b></button>
+
+<div id="id0B" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0B').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>BUTTER CHICKEN MASALA<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotB" onchange="costB();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costB()
+       {
+        var x=document.getElementById('cotB').value;
+        var y=70*x;
+        document.getElementById('dispB').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispB"> 70 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0B').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0B');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>
+            
+  
+  
+   
+
+<div>
+<button onclick="document.getElementById('id0C').style.display='block'" style="width:auto;">Chicken Fry <b>₹70.00</b></button>
+
+<div id="id0C" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0C').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>CHICKEN FRY<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotC" onchange="costC();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costC()
+       {
+        var x=document.getElementById('cotC').value;
+        var y=70*x;
+        document.getElementById('dispC').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispC"> 70 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0C').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0C');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</div>    
+         
+      
+     
+    </div>
+    <div class="w3-container w3-black">
+      <h1>Chinese-Veg</h1>
+    </div>
+    <div class="w3-container">
+    
+    
+    
+    <div>
+<button onclick="document.getElementById('id0D').style.display='block'" style="width:auto;">Veg Fried Rice/Noodles <b>₹45.00</b></button>
+
+<div id="id0D" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0D').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>VEG FRIED RICE/NOODLES<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotD" onchange="costD();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costD()
+       {
+        var x=document.getElementById('cotD').value;
+        var y=45*x;
+        document.getElementById('dispD').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispD"> 45 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0D').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0D');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>    
+         
+    
+      <div>
+<button onclick="document.getElementById('id0E').style.display='block'" style="width:auto;">Schezwan Fried Rice <b>₹45.00</b></button>
+
+<div id="id0E" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0E').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>SCHEZWAN FRIED RICE<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotE" onchange="costE();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costE()
+       {
+        var x=document.getElementById('cotE').value;
+        var y=45*x;
+        document.getElementById('dispE').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispE"> 45 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0E').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0E');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>        
+      
+      
+      
+<div>
+<button onclick="document.getElementById('id0F').style.display='block'" style="width:auto;">Gobi Fried Rice <b>₹50.00</b></button>
+
+<div id="id0F" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0F').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>GOBI FRIED RICE<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotF" onchange="costF();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costF()
+       {
+        var x=document.getElementById('cotF').value;
+        var y=50*x;
+        document.getElementById('dispF').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispF"> 50 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0F').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0F');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+
+
+<div>
+<button onclick="document.getElementById('id0G').style.display='block'" style="width:auto;">Mushroom Fried Rice <b>₹50.00</b></button>
+
+<div id="id0G" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0G').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>MUSHROOM FRIED RICE<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotG" onchange="costG();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costG()
+       {
+        var x=document.getElementById('cotG').value;
+        var y=50*x;
+        document.getElementById('dispG').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispG"> 50 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0G').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0G');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>      
+
+
+<div>
+<button onclick="document.getElementById('id0H').style.display='block'" style="width:auto;">Paneer Fried Rice <b>₹60.00</b></button>
+
+<div id="id0H" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0H').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>PANEER FRIED RICE<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotH" onchange="costH();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costH()
+       {
+        var x=document.getElementById('cotH').value;
+        var y=60*x;
+        document.getElementById('dispH').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispH"> 60 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0H').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0H');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>      
+      
+      
+      
+     
+    </div>
+    
+     <div class="w3-container w3-black">
+      <h1>Chinese-Non-Veg</h1>
+    </div>
+    <div class="w3-container">
+    
+    
+    
+<div>
+<button onclick="document.getElementById('id0I').style.display='block'" style="width:auto;">Egg Fried Rice/Noodles <b>₹50.00</b></button>
+
+<div id="id0I" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0I').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>EGG FRIED RICE/NOODLES<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotI" onchange="costI();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costI()
+       {
+        var x=document.getElementById('cotI').value;
+        var y=50*x;
+        document.getElementById('dispI').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispI"> 50 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0I').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0I');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>      
+      
+      
+ 
+     <div>
+<button onclick="document.getElementById('id0J').style.display='block'" style="width:auto;">Egg Fried Rice/Nice <b>₹50.00</b></button>
+
+<div id="id0J" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0J').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>EGG FRIED RICE/NOODLES<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotJ" onchange="costJ();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costJ()
+       {
+        var x=document.getElementById('cotJ').value;
+        var y=50*x;
+        document.getElementById('dispJ').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispJ"> 50 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0J').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0J');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div> 
+ 
+ 
+ 
+      <div>
+<button onclick="document.getElementById('id0K').style.display='block'" style="width:auto;">Chicken Noodles <b>₹60.00</b></button>
+
+<div id="id0K" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0K').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>CHICKEN NOODLES<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotK" onchange="costK();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costK()
+       {
+        var x=document.getElementById('cotK').value;
+        var y=60*x;
+        document.getElementById('dispK').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispK">  60 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0K').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0K');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div> 
+      
+      
+<div>
+<button onclick="document.getElementById('id0L').style.display='block'" style="width:auto;">Chicken Schezwan Rice/Noodles <b>₹60.00</b></button>
+
+<div id="id0L" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0L').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>CHICKEN SCHEZWAN RICE/NOODLES<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotL" onchange="costL();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costL()
+       {
+        var x=document.getElementById('cotL').value;
+        var y=60*x;
+        document.getElementById('dispL').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispL">  60 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0L').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0L');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div> 
+           
+           
+     
+    </div>
+    <div class="w3-container w3-black">
+      <h1>Cool Corner</h1>
+    </div>
+    <div class="w3-container">
+    
+    
+<div>
+<button onclick="document.getElementById('id0M').style.display='block'" style="width:auto;">Fresh Fruit Juice <b>₹30.00</b></button>
+
+<div id="id0M" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0M').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>FRENCH FRUIT JUICE<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotM" onchange="costM();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costM()
+       {
+        var x=document.getElementById('cotM').value;
+        var y=30*x;
+        document.getElementById('dispM').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispM">  30 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0M').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0M');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div> 
+
+
+
+
+<div>
+<button onclick="document.getElementById('id0N').style.display='block'" style="width:auto;">Cold Coffee <b>₹35.00</b></button>
+
+<div id="id0N" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0N').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>COLD COFFEE<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotN" onchange="costN();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costN()
+       {
+        var x=document.getElementById('cotN').value;
+        var y=35*x;
+        document.getElementById('dispN').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispN">  35 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0N').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0N');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>
+      
+  
+  
+<div>
+<button onclick="document.getElementById('id0O').style.display='block'" style="width:auto;">Sweet Lassi <b>₹30.00</b></button>
+
+<div id="id0O" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0O').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>SWEET LASSI<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotO" onchange="costO();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costO()
+       {
+        var x=document.getElementById('cotO').value;
+        var y=30*x;
+        document.getElementById('dispO').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispO">  30 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0O').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0O');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>    
+  
+  
+  
+  <div>
+<button onclick="document.getElementById('id0P').style.display='block'" style="width:auto;">Cut Fruits <b>₹30.00</b></button>
+
+<div id="id0P" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id0P').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <p   alt="Avatar" class="avatar"font-size="20px"> <center>CUT FRUITS<br><br><img src="food3.jpg" height=100px; width=300></center></p>
+    </div>
+
+    <div class="container">
+      <label><b>Quantity:&nbsp</b></label>
+      <select id="cotP" onchange="costP();">
+       <option value="1"> 1 </option>
+       <option value="2"> 2 </option>
+       <option value="3"> 3 </option>
+       <option value="4"> 4 </option>
+       <option value="5"> 5 </option>
+       <option value="6"> 6 </option>
+      </select>
+      
+       <br>
+     <script>
+       function costP()
+       {
+        var x=document.getElementById('cotP').value;
+        var y=30*x;
+        document.getElementById('dispP').innerHTML=y;
+       }
+     </script>
+     
+      <p>
+      <label><b>Cost: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp  </b></label>
+      <span id="dispP">  30 </span>
+        
+      </p>
+      <button class="orderbtn"> ORDER </button>
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id0P').style.display='none'" class="cancelbtn">Cancel</button>
+      
+    </div>
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id0P');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+</div>     
+      
+      
+    </div>
+  </div>
+</div>
+
+<!-- Contact Modal -->
+<div id="contact" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom">
+    <div class="w3-container w3-black">
+      <span onclick="document.getElementById('contact').style.display='none'" class="w3-button w3-display-topright w3-large">x</span>
+      <h1>Contact</h1>
+    </div>
+    <div class="w3-container">
+      <p><i>
+      
+      
+<h4>For Admissions Contact</h4>
++91-73064-73364
+<h4>For Placement Contact</h4>
+9550280002 / 9000025622
+<h4>Address</h4>
+For current Academic Year (2016-17) classes of Indian Institute of Information Technology, Sri City are being held at IFMR:<br>
+
+IIIT Chittoor, Sri City<br>
+C/o Institute for Financial Management & Research,<br>
+5655 Central Express way,<br>
+Sri City, Satyavedu Mandal,<br>
+Chittoor District, Andhra Pradesh - 517541.<br>
+<h4>Mailing Address</h4>
+Indian Institute of Information Technology<br>
+Sri City, Satyavedu Mandal, Chittoor District<br>
+Andhra Pradesh - 517588, India<br>
+Tel : +91-73064-73364<br>
+<h4>For any other Academic Queries, kindly call: +91-86881-09109</h4>
+<h4>Email : contact@iiits.in</h4>
+<h4>Boys Hostel Address</h4>
+Indian Institute of Information Technology Chittoor,<br>
+Boys Hostel,<br>
+720, Gnan Marg, Sri City,<br>
+Satyavedu Mandal, Chittoor-Dt,<br>
+Andhra Pradesh-517588, India.<br>
+
+   </i>   </p>
+     
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
+
+

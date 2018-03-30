@@ -1,0 +1,519 @@
+<!doctype html>
+<html>
+<head>
+ <title> mess </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<style> 
+#panel1, #flip1 {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px black;
+}
+
+#panel1, #flip1 :hover{
+background-color:rgba(150,150,150,0.3);
+cursor: pointer;
+}
+
+
+#panel1 {
+    height:410px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px;
+    display: none;
+}
+#panel2, #flip2 {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px black;
+}
+
+
+#panel2, #flip2 :hover{
+background-color:rgba(150,150,150,0.3);
+cursor: pointer;
+}
+
+
+#panel2 {
+    height:310px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px;
+    display: none;
+}
+#panel3, #flip3 {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px black;
+}
+
+
+#panel3, #flip3 :hover{
+background-color:rgba(150,150,150,0.3);
+cursor: pointer;
+}
+
+
+
+#panel3 {
+    height:310px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px;
+    display: none;
+}
+#panel4, #flip4 {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px black;
+}
+
+
+
+#panel4, #flip4 :hover{
+background-color:rgba(150,150,150,0.3);
+cursor: pointer;
+}
+
+
+
+#panel4 {
+    height:310px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px;
+    display: none;
+}
+#panel5, #flip5 {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px black;
+}
+
+
+#panel5, #flip5 :hover{
+background-color:rgba(150,150,150,0.3);
+cursor: pointer;
+}
+
+
+
+#panel5 {
+    height:310px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px;
+    display: none;
+}
+#panel6, #flip6 {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px black;
+}
+
+
+#panel6, #flip6 :hover{
+background-color:rgba(150,150,150,0.3);
+cursor: pointer;
+}
+
+
+#panel6 {
+    height:310px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px;
+    display: none;
+}
+#panel7, #flip7 {
+    padding: 5px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border: solid 1px black;
+}
+
+
+#panel7, #flip7 :hover{
+background-color:rgba(150,150,150,0.3);
+cursor: pointer;
+}
+
+
+
+#panel7 {
+    height:310px;
+    background-color: rgba(0,0,0,0.3);
+    padding: 5px;
+    display: none;
+}
+
+
+
+
+html { 
+  background: url(fud.jpg) no-repeat center fixed; 
+  background-size: cover;
+}
+
+
+
+</style>
+</head>
+<body style="background-color:rgba(0,0,0,0.1);color:rgba(255,255,255,0.5)">
+  <br><br>
+  <center>
+  <div style="width:100%">
+     <img src="food2.jpg" style="height:250px;width:100%;"> <br> <br>  
+    <h1> MESS MENU </h1>
+  </div>
+  </center>
+  <div id="flip1" style="width:100% ; float:left">
+   Monday
+  </div>
+  <div id="panel1" style="width:100% ; float:left ;text-align:center">
+  <div style="width:25% ; float:left">
+   <h2> Break Fast </h2>
+   ravva idli,Vada    <br> <br>
+   chutney(Groundnut) <br> <br>
+   Milk,Tea,Coffee    <br> <br>
+   Fruit(grapes)      <br> <br>
+   Toasted Bread      <br> <br>
+   Jam,Butter         <br> <br>
+   Sambar             <br> <br> 
+   Boiled egg
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Lunch </h2>
+   White Rice    <br> <br>
+   Oil Chapathi <br> <br>
+   sambar    <br> <br>
+   curd      <br> <br>
+   Brinjal wet fry      <br> <br>
+   Rasam         <br> <br>
+   paneer butter masala             <br> <br> 
+   fryums,Amlapickel,salt,sugar
+  </div>
+  <div style="width:15% ; float:left">
+   <h2> Snacks </h2>
+   Aloo Pakoda   <br> <br>
+   Tea/Coffee/Milk
+  </div>
+  <div style="width:25% ; float:left">
+  <h2> Dinner </h2>
+   White Rice   <br> <br>
+   Aloo paratha <br> <br>
+   sambar    <br> <br>
+   Masoor Dal      <br> <br>
+   curd      <br> <br>
+   gulab jamun         <br> <br>
+   Potato chips,Ketchup,salt,sugar             <br> <br> 
+   Dondakaya 65
+  </div>
+  </div>  <br> <br> 
+  <div id="flip2" style="width:100% ; float:left">
+   Tuesday
+  </div>
+  <div id="panel2" style="width:100% ; float:left text-align:center">
+  <div style="width:25% ; float:left">
+   <h2> Break Fast </h2>
+   Puri    <br> <br>
+   chutney(karam), potato curry <br> <br>
+   Milk,Tea,Coffee    <br> <br>
+   Fruit(orange)    <br> <br>
+   Toasted Bread      <br> <br>
+   Jam,Butter         <br> <br>
+   Toasted Bread
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Lunch </h2>
+   White Rice    <br> <br>
+   Pulka         <br> <br>
+   sambar    <br> <br>
+   curd    <br> <br>
+   Aloo Fry      <br> <br>
+   Spinach dal(palak)         <br> <br>
+   ladies finger curry  <br> <br>
+   PotatoChips,tomatopickel,salt,sugar <br> <br>
+  </div>
+  <div style="width:15% ; float:left">
+   <h2> Snacks </h2>
+   Onion Pakoda    <br> <br>
+   Tea/Coffee/Milk
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Dinner </h2>
+   Egg Fried Rice(Basmathi Rice)    <br> <br>
+   Veg Fried rice (Basmathi Rice) <br> <br>
+   Chapathi    <br> <br>
+   Gobi masala    <br> <br>
+   raitha      <br> <br>
+   kesari sweet         <br> <br>
+   Fryums,MangoPickel,salt,sugar
+  </div>
+  </div> <br> <br>
+  <div id="flip3" style="width:100% ; float:left">
+   Wednesday
+  </div>
+  <div id="panel3" style="width:100% ; float:left text-align:center">
+  <div style="width:25% ; float:left">
+   <h2> Break Fast </h2>
+   Dosa(karam/masala)   <br> <br>
+   chutney(groundnut) <br> <br>
+   Milk,Tea,Coffee    <br> <br>
+   Fruit(Watermelon)    <br> <br>
+   Bread      <br> <br>
+   Jam,Butter         <br> <br>
+   sambar
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Lunch </h2>
+   White Rice    <br> <br>
+   Oil Chapathi        <br> <br>
+   pappu charu    <br> <br>
+   curd    <br> <br>
+   cabbage 65      <br> <br>
+   rasam         <br> <br>
+   green peas masala  <br> <br>
+   gongurapickel,salt,sugar <br> <br>
+  </div>
+  <div style="width:15% ; float:left">
+   <h2> Snacks </h2>
+   Mixture    <br> <br>
+   Tea/Coffee/Milk
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Dinner </h2>
+   veg biryani(Baasmathi Rice)    <br> <br>
+   pulka <br> <br>
+   chicken curry (non-veg)    <br> <br>
+   paneer butter masala(veg)    <br> <br>
+   raitha      <br> <br>
+   seemiya sweet         <br> <br>
+   salad
+  </div>
+  </div> <br> <br>
+  <div id="flip4" style="width:100% ; float:left">
+   Thursday
+  </div>
+  <div id="panel4" style="width:100% ; float:left text-align:center">
+  <div style="width:25% ; float:left">
+   <h2> Break Fast </h2>
+   Punugulu/seemiya Upma   <br> <br>
+   chutney(groundnut) <br> <br>
+   Milk,Tea,Coffee    <br> <br>
+   chutney(karam)    <br> <br>
+   Bread      <br> <br>
+   Jam,Butter         <br> <br>
+   Fruit(guva)(veg)
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Lunch </h2>
+   White Rice    <br> <br>
+   Chapathi        <br> <br>
+   sambar    <br> <br>
+   curd    <br> <br>
+   Egg Curry      <br> <br>
+   rasam         <br> <br>
+   Channa Masala  <br> <br>
+   cylindrcal frym,pickel,salt,sugar <br> <br>
+  </div>
+  <div style="width:15% ; float:left">
+   <h2> Snacks </h2>
+   Veg Puff    <br> <br>
+   Tea/Coffee/Milk
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Dinner </h2>
+   White Rice   <br> <br>
+   Oil Chapathi <br> <br>
+   sambar    <br> <br>
+   Channa dal    <br> <br>
+   curd     <br> <br>
+   Aloo kurma         <br> <br>
+   potato chips,pickel,,salt,sugar
+  </div>
+  </div> <br> <br>  
+  <div id="flip5" style="width:100% ; float:left">
+   Friday
+  </div>
+  <div id="panel5" style="width:100% ; float:left text-align:center">
+  <div style="width:25% ; float:left">
+   <h2> Break Fast </h2>
+   Pongal+ vada   <br> <br>
+   chutney(coconut) <br> <br>
+   Milk,Tea,Coffee    <br> <br>
+   sambar/aloo curry    <br> <br>
+   Bread      <br> <br>
+   Jam,Butter,Omlet   <br> <br>
+   Fruit(banana)
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Lunch </h2>
+   White Rice    <br> <br>
+   Pulka        <br> <br>
+   sambar    <br> <br>
+   curd    <br> <br>
+   ladies finger fry      <br> <br>
+   dal makhani        <br> <br>
+   Ridge gourd+tamato(curry)  <br> <br>
+   Mangopickel,salt,sugar,Potato chips <br> <br>
+  </div>
+  <div style="width:15% ; float:left">
+   <h2> Snacks </h2>
+   Dilpasand/Cupcakes(2)    <br> <br>
+   Tea/Coffee/Milk
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Dinner </h2>
+   White Rice    <br> <br>
+   pulka <br> <br>
+   rasam    <br> <br>
+   Aloo Gobi Mutter gravy    <br> <br>
+   Majjiga pulusu      <br> <br>
+   Egg Burjji         <br> <br>
+   Fryums,pickel,salt,sugar
+  </div>
+  </div> <br> <br>
+  <div id="flip6" style="width:100% ; float:left">
+   Saturday
+  </div>
+  <div id="panel6" style="width:100% ; float:left text-align:center">
+  <div style="width:25% ; float:left">
+   <h2> Break Fast </h2>
+   pesarattu/Upma   <br> <br>
+   chutney(coconut) <br> <br>
+   Milk,Tea,Coffee    <br> <br>
+   Fruit(Muskmelon)    <br> <br>
+   Bread      <br> <br>
+   Jam,Butter         <br> <br>
+   sambar
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Lunch </h2>
+   White Rice    <br> <br>
+   Oil Chapathi        <br> <br>
+   sambar    <br> <br>
+   curd    <br> <br>
+   Gobbi 65      <br> <br>
+   rasam         <br> <br>
+   Black chenna curry  <br> <br>
+   papad,gongurapickel,salt,sugar <br> <br>
+  </div>
+  <div style="width:15% ; float:left">
+   <h2> Snacks </h2>
+   Aloo Samosa    <br> <br>
+   Tea/Coffee/Milk
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Dinner </h2>
+   White Rice    <br> <br>
+   Dosa     <br> <br>
+   sambar    <br> <br>
+   chutney(groundnut)     <br> <br>
+   buttermilk     <br> <br>
+   vankaya curry        <br> <br>
+   potatochips,pickel,salt,sugar
+  </div>
+  </div> <br> <br>
+  <div id="flip7" style="width:100% ; float:left">
+   Sunday
+  </div>
+  <div id="panel7" style="width:100% ; float:left text-align:center">
+  <div style="width:25% ; float:left">
+   <h2> Break Fast </h2>
+   poha/noodels   <br> <br>
+   OnionUtthapam/Aloo Paratha <br> <br>
+   Milk,Tea,Coffee    <br> <br>
+   boiled egg    <br> <br>
+   Bread      <br> <br>
+   Jam,Butter         <br> <br>
+   Fruit(papaya)  <br> <br>
+   chutney(groundnut)
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Lunch </h2>
+   White Rice    <br> <br>
+   methi chapathi        <br> <br>
+   sambar    <br> <br>
+   curd    <br> <br>
+   palak pakoda      <br> <br>
+   mango dal         <br> <br>
+   rajma curry  <br> <br>
+   pickel,salt,sugar <br> <br>
+  </div>
+  <div style="width:15% ; float:left">
+   <h2> Snacks </h2>
+   Mirchi Bajji    <br> <br>
+   Tea/Coffee/Milk
+  </div>
+  <div style="width:25% ; float:left">
+   <h2> Dinner </h2>
+   White Rice    <br> <br>
+   Biryani(Baasmathi Rice)    <br> <br>
+   Roti <br> <br>
+   chicken curry (non-veg)    <br> <br>
+   kadai paneer (veg)    <br> <br>
+   raitha      <br> <br>
+   jangri         <br> <br>
+   Fruit salad (veg)
+  </div>
+  </div> <br> <br>
+
+
+<script> 
+$(document).ready(function(){
+    $("#flip1").click(function(){
+        $("#panel1").slideToggle("slow");
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $("#flip2").click(function(){
+        $("#panel2").slideToggle("slow");
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $("#flip3").click(function(){
+        $("#panel3").slideToggle("slow");
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $("#flip4").click(function(){
+        $("#panel4").slideToggle("slow");
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $("#flip5").click(function(){
+        $("#panel5").slideToggle("slow");
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $("#flip6").click(function(){
+        $("#panel6").slideToggle("slow");
+    });
+});
+</script>
+<script> 
+$(document).ready(function(){
+    $("#flip7").click(function(){
+        $("#panel7").slideToggle("slow");
+    });
+});
+</script> 
+
+
+</body>
+</html>
+

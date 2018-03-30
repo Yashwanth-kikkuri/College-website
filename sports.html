@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+
+
+<style>
+
+
+
+
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	/*<!--background: #e9e9e9;-->*/
+	color: #9a9a9a;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 24px;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 16px 24px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat h4 {
+	font-size: 12px;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-message-counter {
+	background: #e62727;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+}
+
+.chat-close {
+	background: #1b2126;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;
+	margin: 2px 0 0 0;
+	text-align: center;
+	width: 16px;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 252px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message img {
+	border-radius: 50%;
+	float: left;
+}
+
+.chat-message-content {
+	margin-left: 56px;
+}
+
+.chat-time {
+	float: right;
+	font-size: 10px;
+}
+
+.chat-feedback {
+	font-style: italic;	
+	margin: 0 0 0 80px;
+}
+
+
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  opacity:0.6;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+
+
+
+html { 
+  background: url(spw.jpg) no-repeat center fixed; 
+  background-size: cover;
+}
+
+
+
+.mySlides {display:none}
+.w3-left, .w3-right, .w3-badge {cursor:pointer}
+.w3-badge {height:13px;width:13px;padding:0}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: 0.4} 
+  to {opacity: 1}
+}
+
+
+.button {
+    background-color:black;
+    border:none;
+    color:white;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius:30px;
+    padding: 5px 30px;}
+    
+button:hover {
+    opacity: 0.5;
+}
+
+
+</style>
+
+</head>
+
+<body style="padding:7px">
+<br><br>
+<div class="w3-content w3-display-container" style="width:96%;height:350px">
+  <img class="mySlides fade" src="sp3.jpg" style="width:100%;height:350px">
+  <img class="mySlides fade" src="sp2.jpg" style="width:100%;height:350px">
+  <img class="mySlides fade" src="sp1.jpg" style="width:100%;height:350px">
+  <div class="w3-center w3-container w3-section w3-large w3-text-white w3-display-bottommiddle" style="width:100%">
+    <div class="w3-left w3-hover-text-khaki" onclick="plusDivs(-1)">&#10094;</div>
+    <div class="w3-right w3-hover-text-khaki" onclick="plusDivs(1)">&#10095;</div>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(1)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(2)"></span>
+    <span class="w3-badge demo w3-border w3-transparent w3-hover-white" onclick="currentDiv(3)"></span>
+  </div>
+</div>
+<br>
+
+<div style="text-align:center;font-family:raleway;">
+
+<a href="#contact"><button class="button">Contacts</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#about"><button class="button">About   </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<button class="button">Immerse In </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="gallery.html"><button class="button">Gallery </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="#ptv"><button class="button">places </button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  
+</div>
+
+<br><br>
+<center>
+
+<div style="background-color: #000000;opacity:0.4;border:1px solid grey;width:1000px;font-family:raleway">
+<h3 style="color:white;opacity:1.0;font-family:raleway">Sports Club</h3>
+
+<div style="color:white;opacity:1.0;font-family:raleway">
+<p>
+<b>
+The Sport Club Program at Indian institute of Information Technology is comprised of sport 
+clubs formed, developed, governed, and administered by the 
+student membership working in 
+conjunction with the Office of Intramurals and Recreation, a unit of the Division of Student 
+Life.
+The key to the success of this program is student leadership, interest, involvement, and 
+participation. The Sport Club Council
+with advisement of the Office of Intramurals and 
+Recreation has created this manual in order to provide officers with the structural framework 
+necessary for clubs to gain recognition, develop leadership skills, and run safe, efficient 
+programs.
+The policies and procedures contained herein apply to all of the clubs. Sport club members, 
+officers, coaches, and the faculty/staff advisor are required to read, understand, and follow the 
+procedures outlined in this manual. Questions regarding the policies and procedures within this 
+manual should be directed to the 
+Mentor
+of Intramurals and Recreation or the Sport Club.
+</b>
+</p>
+
+
+<p>
+
+<h4>Objectives</h4>
+<b>
+*
+The opportunity to prepare the students for instruction and participation in a wide 
+variety of sports of which one may develop sound, 
+lifelong leisure values<br>
+*
+To develop leadership skills by providing opportunities for students to organize, 
+administer and manage through individual clubs and/or the sports club<br>
+*
+To provide an outlet for advanced participation and competition in a particular 
+sport<br>
+*
+To develop Equity, Diversity, Inclusion and Learning skills<br>
+*
+To develop personal foundations, advising and helping
+to
+develop the organic systems 
+of the body.<br>
+*
+The development of the organic vigor is dependent on a wide selection of activities and 
+so 
+conducted that the normal functions of the body are developed and improved.<br>
+*
+To develop Neuro
+-
+muscular co
+-
+ordination or skill.<br>
+*
+Individual and group play activities enable people to give wholesome expression to their 
+innate desires and interests,<br>
+*
+To develop 
+right attitude towards and physical activities in general.<br>
+*It gives opportunity for social contact, group living, and self-adjustment with the group.<br>
+*
+Development of psychomotor skills.<br>
+*
+Development of understanding and appreciation of the techniques and strategies of 
+sports.<br>
+*
+Preparation for leisure time.<br>
+*
+Elimination of worries and anxieties through developing appropriate interests and habits 
+of engaging in exercise and sports.<br>
+*
+Attainment of knowledge of proper health procedure as related to physical exercise.<br>
+*
+To develop correct health habits<br>
+*
+A rational programme of physical activities can stimulate the participant to develop 
+favorable attitudes and habits in physical, mental, moral, social and emotional health.<br>
+*
+Instilling in the younger generation a sense of
+patriotism, self-reliance and discipline.<br>
+*
+To give adequate scope for bringing out the aptitudes and talents of the students.<br>
+</b>
+</p>
+
+
+<p>
+<h4>Activities</h4>
+
+<b>
+*Indoor games<br>
+
+*Outdoor games<br>
+
+*Conduct intra and inter-meet competition<br>
+</b>
+
+</p>
+
+
+<p>
+<h4>Outcomes</h4>
+<b>
+At the end of the course the students 
+can<br>
+*
+Identify the student leadership and self confidence<br>
+*
+Report on skills gained that can benefit them for a lifetime<br>
+*
+Gain experience in organizational leadership, event management and business processes.<br>
+*
+Develop their body both physically and mentally.<br>
+</b>
+</p>
+
+
+
+
+<p>
+<h4>Constitution</h4>
+<b>
+Commit to my team by turning up to all trainings and games. I will inform my coach if I 
+am unable to attend <br>
+*
+Always play by the rules<br> 
+*
+Never argue with an official. If I disagree with a decision I will inform the captain, coach 
+or manager during
+a break or after the competition<br>
+*
+Control my temper. I understand that verbal abuse of officials and other players or 
+deliberately distracting or provoking an opponent is not acceptable or permitted behavior 
+in any sport<br>
+*
+Work equally hard for myself and 
+team<br>
+*
+Be a good sport and applaud all good plays whether they are made by my team or the 
+opposition<br>
+*
+Treat all players in my sport as I like to be treated. I will not bully or take unfair 
+advantage of another competitor<br>
+*
+Co-operate with my coach, team mates and opponents<br>
+*
+Display modesty in victory and graciousness in defeat<br>
+*
+Participate for my own enjoyment and benefit, not just to please parents and coaches <br>
+*
+Respect the rights, dignity and worth of all participants regardless of their gender, ability, 
+cultural
+background or religion <br>
+*
+Thank the opposition and officials at the end of the game.<br>
+*
+Institute equipment can be used by the members of the club under supervision in the
+club area and have to be returned in proper condition.<br>
+*
+The committee members will be 
+held responsible for the sports equipment 
+provided to the club.<br>
+*
+The Club representatives must safely deposit the equipment after any kind of practice or event.<br>
+</b>
+</p>
+
+
+
+
+
+
+
+<h3 id="about">About</h3>
+
+<p>
+<b>
+Sport (British English) or sports (American English) includes all forms 
+of competitive physical activity or games which,through casual or organised 
+participation, aim to use, maintain or improve physical ability and skills while
+providing enjoyment to participants, and in some cases, entertainment for 
+spectators.Usually the contest or game is between two sides, each attempting
+to exceed the other. Some sports allow a tie game. others provide tie-breaking
+methods, to ensure one winner and one loser. A number of such two-sided contests
+may be arranged in a tournament producing a champion. Many sports leagues make an
+annual champion by arranging games in a regular sports season, followed in some
+cases by playoffs. Hundreds of sports exist, from those between single contestants,
+through to those with hundreds of simultaneous participants, either in teams or
+competing as individuals. In certain sports such as racing, many contestants
+may compete, each against each other, with one winner.
+</b>
+</p>
+
+
+
+<p>
+<b>
+
+
+Sport is generally recognised as system of activities which are based in physical
+athleticism or physical dexterity, with the largest major competitions such as the
+Olympic Games admitting only sports meeting this definition, and other organisations 
+such as the Council of Europe using definitions precluding activities without a 
+physical element from classification as sports. However, a number of competitive,
+but non-physical, activities claim recognition as mind sports. The International Olympic
+Committee (through ARISF) recognises both chess and bridge as bona fide sports, 
+and SportAccord, the international sports federation association, recognises five
+non-physical sports: bridge, chess, draughts (checkers), Go and xiangqi, and
+limits the number of mind games which can be admitted as sports.
+</b>
+</p>
+
+
+<h3 id="contact">Contact Us</h3>
+<pre>
+Mr. Sanjay Sahu
+Mentor
+sanjay.sahu@iiits.in
+Staff
+
+
+Mr.Sumanth
+President
+Sumanth.m15@iiits.in
+UG-3
+
+
+
+Mr. Uday Raj
+Vice President
+udayraj.s16@iiits.in
+UG-2
+
+
+
+Mr.Raja Ram .V
+Secretary 
+rajaramachandrara.v16@iiits.in
+UG-2
+
+
+
+Ms. Parkhi Mohan
+Joint Secretary
+Parkhi.m16@iiits.in
+UG-2
+
+
+</pre>
+</div>
+</div>
+
+
+</center>
+
+
+
+<button onclick="topFunction()" id="myBtn" title="Go to top"  style="font-family:raleway">Top</button>
+
+
+
+
+<script>
+// When the user scrolls down 55px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.body.scrollTop > 55 || document.documentElement.scrollTop > 55) {
+        document.getElementById("myBtn").style.display = "block";
+    } else {
+        document.getElementById("myBtn").style.display = "none";
+    }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+
+
+
+
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+   
+    setTimeout(carousel, 3000); // Change image every 2 seconds
+}
+
+
+
+}
+</script>
+
+
+
+<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>Navic</h4>
+
+			<span class="chat-message-counter">nav</span>
+
+		</header>
+
+		<div class="chat"><br><br>
+			<center>enter here where u wanna go....</center><br><br>
+			
+			<p class="chat-feedback">example:- homepage</p>
+
+			<form action="chatbot.php" method="post">
+
+				<fieldset>
+					<form>
+					<input type="text"  name="text" style="width:70%;"  placeholder="enter here..." autofocus >
+					<input type="submit" value="submit" style="background-color:black;color:white;width:20%;height:32px">
+					<input type="hidden">
+					</form>
+				</fieldset>
+
+			</form>
+
+		</div> <!-- end chat -->
+
+	</div> <!-- end live-chat -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+	
+	
+	(function() {
+
+	$('#live-chat header').on('click', function() {
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+	});
+
+	$('.chat-close').on('click', function(e) {
+
+		e.preventDefault();
+		$('#live-chat').fadeOut(300);
+
+	});
+
+}) ();
+	
+	</script>
+	
+	
+
+
+
+</body>
+</html> 
+

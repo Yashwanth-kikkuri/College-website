@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+
+
+	<meta charset="UTF-8">
+	
+
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700">
+
+
+<style>
+
+@charset "utf-8";
+/* CSS Document */
+
+/* ---------- GENERAL ---------- */
+
+body {
+	/*<!--background: #e9e9e9;-->*/
+	color: #9a9a9a;
+	font: 100%/1.5em "Droid Sans", sans-serif;
+	margin: 0;
+}
+
+a { text-decoration: none; }
+
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+
+h4, h5 {
+	line-height: 1.5em;
+	margin: 0;
+}
+
+hr {
+	background: #e9e9e9;
+    border: 0;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 1px;
+    margin: 0;
+    min-height: 1px;
+}
+
+img {
+    border: 0;
+    display: block;
+    height: auto;
+    max-width: 100%;
+}
+
+input {
+	border: 0;
+	color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    line-height: normal;
+    margin: 0;
+}
+
+p { margin: 0; }
+
+.clearfix { *zoom: 1; } /* For IE 6/7 */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+.clearfix:after { clear: both; }
+
+/* ---------- LIVE-CHAT ---------- */
+
+#live-chat {
+	bottom: 0;
+	font-size: 12px;
+	right: 24px;
+	position: fixed;
+	width: 300px;
+}
+
+#live-chat header {
+	background: #293239;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	cursor: pointer;
+	padding: 16px 24px;
+}
+
+#live-chat h4:before {
+	background: #1a8a34;
+	border-radius: 50%;
+	content: "";
+	display: inline-block;
+	height: 8px;
+	margin: 0 8px 0 0;
+	width: 8px;
+}
+
+#live-chat h4 {
+	font-size: 12px;
+}
+
+#live-chat h5 {
+	font-size: 10px;
+}
+
+#live-chat form {
+	padding: 24px;
+}
+
+#live-chat input[type="text"] {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	padding: 8px;
+	outline: none;
+	width: 234px;
+}
+
+.chat-message-counter {
+	background: #e62727;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	display: none;
+	font-size: 12px;
+	font-weight: bold;
+	height: 28px;
+	left: 0;
+	line-height: 28px;
+	margin: -15px 0 0 -15px;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 28px;
+}
+
+.chat-close {
+	background: #1b2126;
+	border-radius: 50%;
+	color: #fff;
+	display: block;
+	float: right;
+	font-size: 10px;
+	height: 16px;
+	line-height: 16px;
+	margin: 2px 0 0 0;
+	text-align: center;
+	width: 16px;
+}
+
+.chat {
+	background: #fff;
+}
+
+.chat-history {
+	height: 252px;
+	padding: 8px 24px;
+	overflow-y: scroll;
+}
+
+.chat-message {
+	margin: 16px 0;
+}
+
+.chat-message img {
+	border-radius: 50%;
+	float: left;
+}
+
+.chat-message-content {
+	margin-left: 56px;
+}
+
+.chat-time {
+	float: right;
+	font-size: 10px;
+}
+
+.chat-feedback {
+	font-style: italic;	
+	margin: 0 0 0 80px;
+}
+
+</style>
+
+
+
+
+
+
+   <style>
+
+  #mySidenav a 
+  {
+    position: absolute;
+    left: -50px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 160px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+ }
+
+ #mySidenav a:hover 
+ {
+    left: 0;
+ }
+
+ #about 
+  {
+    top: 20px;
+    background-color: #000080;
+  }
+
+  #blog
+   {
+    top: 80px;
+    background-color: #555;
+   }
+
+  #projects {
+    top: 140px;
+    background-color: #000080;
+  }
+
+  #contact 
+  {
+    top: 200px;
+    background-color: #555;
+  }
+
+
+ #ls
+   {
+     background: url("300.jpg") no-repeat center fixed;
+     background-size:cover;height:650px;
+    }
+
+   </style>
+</head>
+
+
+<body>
+
+
+
+	<div id="live-chat">
+		
+		<header class="clearfix">
+			
+			<a href="#" class="chat-close">x</a>
+
+			<h4>Navic</h4>
+
+			<span class="chat-message-counter">nav</span>
+
+		</header>
+
+		<div class="chat"><br><br>
+			<center>enter here where u wanna go....</center><br><br>
+			
+			<p class="chat-feedback">example:- homepage</p>
+
+			<form action="chatbot.php" method="post">
+
+				<fieldset>
+					<form>
+					<input type="text"  name="text" style="width:70%;"  placeholder="enter here..." autofocus >
+					<input type="submit" value="submit" style="background-color:black;color:white;width:20%;height:32px">
+					<input type="hidden">
+					</form>
+				</fieldset>
+
+			</form>
+
+		</div> <!-- end chat -->
+
+	</div> <!-- end live-chat -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.2/jquery.min.js"></script>
+	<script>
+	
+	
+	(function() {
+
+	$('#live-chat header').on('click', function() {
+
+		$('.chat').slideToggle(300, 'swing');
+		$('.chat-message-counter').fadeToggle(300, 'swing');
+
+	});
+
+	$('.chat-close').on('click', function(e) {
+
+		e.preventDefault();
+		$('#live-chat').fadeOut(300);
+
+	});
+
+}) ();
+	
+	</script>
+	
+
+
+
+
+
+
+
+
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="#ABOUT" id="about">ABOUT</a>
+  <a href="#CLASSNOTES" id="blog">CLASS_NOTES</a>
+  <a href="#ASSIGNMENTS" id="projects">ASSIGNMENTS</a>
+  <a href="#REFERENCE" id="contact">REFERENCE</a>
+</div> 
+
+<div style="font-family:raleway;background-color:#8E44AD;" id="ls">
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;<img src="iiits.png"  style="width:3%;height:35px;"> IIITSRICITY
+<marquee behavior="alternate" direction="up" width="100%">
+	<marquee direction="right" behavior="alternate" style="font-size:45px;color:#000080;">ITWS-1</marquee>
+</marquee>
+
+&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;
+<br><br><br><br><br><br>&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; 
+<a style="font-size:45px;color:#09145A">Is 'false' is false?....false!!</a>
+  &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://sites.google.com/site/shivram1987/Profile" style="color: #030f58 ;font-size:25px">Shiv Ram Dubey</a>
+</div>
+
+<div style="text-align:center;font-family:raleway;">
+<a href=""><button class="button"> Go up  </button></a><br><br><br>
+</div>
+</div>
+<center>
+<div id="ABOUT" style="font-family:raleway;background-color: #0b1dcf;opacity:0.7;border:0.5px solid grey;width:1000px;color:#5d6d7e;font-weight:bold;border-radius:40px;font-size:20px">
+<h3>Syllabus</h3>
+Introduction to Computers, HTML & CSS, Unix Commands, Latex, Beamer, JavaScript and Game Development, PHP, Bash Scripting
+<h2>Timings</h2>          
+<h3>Class</h3>
+Monday          08.00 am - 09.30 am        Sec-A<br>
+Monday          09.30 am - 11.00 am         Sec-B<br>
+Saturday         09.00 am - 10.30 am        Sec-A<br>
+Saturday         10.30 am - 12.00 pm        Sec-B<br>
+
+<h3>Lab</h3>
+Thursday        03.00 pm - 06.00 pm         Sec-A<br>
+Friday             03.00 pm - 06.00 pm          Sec-B<br>
+Saturday         04.00 pm - 07.00 pm         Sec-C<br>
+<h3>Grading</h3>
+10% Exam 1, <br>
+10% Exam 2, <br>
+25% Exam 3, <br>
+15% Quiz, <br>
+40% Lab Assignments + Projects<br>
+	
+</div>
+</center><br>
+<center>
+<div id="CLASSNOTES"style="font-family:raleway;background-color: #0e1dbb ;opacity:0.7;border:0.5px solid grey;width:1000px;color:#5d6d7e;font-weight:bold;border-radius:40px;font-size:20px">
+<h3>CLASS NOTES</h3>
+
+<a href="l1.pdf">lecture-1<i>basics</i></a><br>
+<a href="l2.pdf">lecture-2<i>computer-basics</i></a><br>
+<a href="l3.pdf">lecture-3<i>HTML</i></a><br>
+<a href="l4.pdf">lecture-4<i>HTML</i></a><br>
+<a href="l5.pdf">lecture-5<i>HTML(styles,css)</i></a><br>
+<a href="l6.pdf">lecture-6<i>HTML(tables,webpage layout using tables)</i></a><br>
+<a href="l7.pdf">lecture-7<i>HTML(webpage layout using div,mutlimedia)</i></a><br>
+<a href="l8.pdf">lecture-8<i>HTML(forms)</i></a><br>
+<a href="l9.pdf">lecture-9<i>UNIX(listing)</i></a><br>
+<a href="l10.pdf">lecture-10<i>UNIX(display,copy,move,count,permission)</i></a><br>
+<a href="l11.pdf">lecture-11<i>UNIX(permission,group,shells,meta characters)</i></a><br>
+<a href="l12.pdf">lecture-12<i>UNIX(command substitution,sequence,grouping,subshells,qouting,ps,kill,eval)</i></a><br>
+<a href="l13.pdf">lecture-13<i>UNIX(gzip,sort,uniq,re,grep)</i></a><br>
+<a href="l14.pdf">lecture-14<i>UNIX(vi)</i></a><br>
+<a href="l15.pdf">lecture-15<i>Javascript</i></a><br>
+<a href="l16.pdf">lecture-16<i>Javascript</i></a><br>
+<a href="l17.pdf">lecture-17<i>Javascript</i></a><br>
+<a href="l18.pdf">lecture-18<i>Javascript</i></a><br>
+<a href="l19.pdf">lecture-19<i>Javascript(magic square game,snake game)</i></a><br>
+<a href="l20.pdf">lecture-20<i>php(codes)</i></a><br>
+
+
+</div>
+</center><br>
+<center>
+<div id="ASSIGNMENTS" style="font-family:raleway;background-color:#2e39a5;opacity:0.7;border:0.7px solid grey;width:1000px;color:#5d6d7e;font-weight:bold;border-radius:40px;font-size:20px">
+<h3>ASSIGNMENTS</h3>
+<a href="a1.pdf">practice assignment-1</a><br>
+<a href="a2.pdf">practice assignment-2</a><br>
+<a href="a3.pdf">practice assignment-3</a><br>
+<a href="a4.pdf">practice assignment-4</a><br>
+<a href="a5.pdf">practice assignment-5</a><br>
+<a href="a6.pdf">practice assignment-6</a><br>
+<a href="a7.pdf">practice assignment-7</a><br>
+</div>
+
+<br><br>
+<div id="REFERENCE"style="font-family:raleway;background-color:#0b1dcf;opacity:0.7;border:0.5px solid grey;width:1000px;color:black;font-weight:bold;border-radius:40px;font-size:20px">
+
+<br><br><h3 style="font-family:raleway;">REFERENCE</h3>
+<br> 
+<div id="REFERENCE" style="font-family:raleway;">
+<br> 
+<div id="books" style="font-family:raleway;">
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="b2.pdf" download> <img src="index.jpeg"  width=100px; height=150px; onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="https://www.w3schools.com/"> <img src="index.png"  width=100px; height=150px; onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="u.pdf" download> <img src="unix.jpeg"  width=100px; height=150px; onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="at.pdf" download> <img src="at.jpeg"  width=100px; height=150px; onmouseover="bigImg(this)" onmouseout="normalImg(this)"></a>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<br><br><br>
+</div>
+</center>
+
+<script>
+function bigImg(x) {
+    x.style.height = "250px";
+    x.style.width = "150px";
+}
+
+function normalImg(x) {
+    x.style.height = "150px";
+    x.style.width = "100px";
+}
+</script>
+
+
+
+</body>
+</html>
