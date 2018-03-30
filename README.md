@@ -1,6 +1,6 @@
 # College-website
 
-my team and I did this project to implement the concepts that we have learnt in our college . We chose this topic so that we can resolve the issues in our college website and also added few student requirement features in it by discussing among us and seniors.
+My team and I did this project to implement the concepts that we have learnt in our college . We chose this topic so that we can resolve the issues in our college website and also added few student requirement features in it by discussing among us and seniors.
 
 The languages we used in our project were:
  *  HTML
