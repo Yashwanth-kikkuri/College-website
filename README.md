@@ -1,6 +1,17 @@
 # College-website
 
-My team and I did this project to implement the concepts that we have learnt in our college . We chose this topic so that we can resolve the issues in our college website and also added few student requirement features in it by discussing among us and seniors.
+My team and I, have made a project of creating our college website. The main aim of this project is to come out with a more user friendly site by displaying all the practical requirements of students, which we came to know by discussing with our seniors & classmates.
+
+For this project we have used the following languages:
+HTML
+CSS
+JavaScript
+PHP
+MySQL
+Bootstrap
+JSON       (Note: The last two were not much used in it.)
+Further along with the above languages I am also more familiarised with Python, Angular JS and Java Note, where in I am just a beginner with last two languages.
+
 
 The languages we used in our project were:
  *  HTML
